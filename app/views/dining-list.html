@@ -1,0 +1,22 @@
+<section class="yelp-attribution">
+    <a ng-href="http://www.yelp.com" target="_blank" class="yelp-attribution-link">Local Dining Courtesy of </a>
+    <div class="brewer40-yelp"></div>
+</section>
+<section class="search">
+    <input class="search-input" placeholder="Search: Name, Road or Town" ng-model="search.$">
+</section>
+<section class="spinner" loading-spinner-widget></section>
+<a ng-href="#/{{brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in diningList | orderBy:  '+name' | filter:search:strict  track by $index">
+    <img ng-src="{{dining.photo_url_small}}" class="yelp-list-item-image" />
+    <p class="yelp-list-item-details">{{dining.name}}</p>
+    <p class="yelp-list-item-details-small">{{dining.address1}}</p>
+    <p class="yelp-list-item-details-small">{{dining.city}}, {{dining.state}} {{dining.zip}}</p>
+    <p class="rating" data-rating="{{dining.avg_rating}}">
+        <i class="star-1">★</i>
+        <i class="star-2">★</i>
+        <i class="star-3">★</i>
+        <i class="star-4">★</i>
+        <i class="star-5">★</i>
+        <span class="rating-small">   -from {{dining.review_count}} Reviews(s)</span>
+    </p>
+</a>

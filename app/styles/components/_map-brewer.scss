@@ -1,0 +1,33 @@
+.googlemap {
+    display: block;
+    @extend %inside-view;
+    height: rhythm(24, 16px);
+    @include translateZ(25);
+    z-index: 25;
+    &-header {
+        @extend %inside-view;
+        min-height: rhythm(2.6, 16px);
+        border-bottom: .1em solid $green;
+        background-color: $attribution;
+        @include translateZ(25);
+        z-index: 25;
+        &-image {
+            @extend %lists-image;
+            margin-top: rhythm(.5, 16px);
+        }
+        &-text {
+            @include span(9 of 12);
+            @include type-scale(small);
+            @include type-weight(bold);
+            margin: rhythm(.75, 16px) 0 0 0;
+            color: $black;
+            margin-bottom: 0;
+            &-small {
+                @include span(9 of 12);
+                @include type-scale(small);
+                margin: 0 0 rhythm(.75, 16px);
+                color: $black;
+            }
+        }
+    }
+}

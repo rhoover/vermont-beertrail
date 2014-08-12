@@ -1,0 +1,35 @@
+.intro {
+    @include span(12 of 12);
+    &-description {
+        text-align: center;
+        color: $black;
+        @include type-scale(base);
+        &-header {
+            text-align: center;
+            color: $black;
+            @include type-scale(medium);
+        }
+    }
+    &-choose {
+        @include span(12 of 12);
+        margin-top: rhythm(1, 16px);
+        margin-right: 0;
+        margin-left: 0;
+        background-color: rgba($green, .25);
+        border-radius: .25em;
+        border: .1em solid $green-dark;
+        &-link {
+            padding: rhythm(.5, 16px) gutter(6);
+            @include type-scale(small);
+            text-decoration: none;
+            color: $black;
+            &-left {
+                @extend %intro-links;
+                border-right: .1em solid $green-dark;
+            }
+            &-right {
+                @extend %intro-links;
+            }
+        }
+    }
+}

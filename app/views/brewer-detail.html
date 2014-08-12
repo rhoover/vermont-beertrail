@@ -1,0 +1,8 @@
+<img ng-src="images/brewer100/{{brewer.selector}}.png" class="brewerdetail-image" />
+<h2 class="brewerdetail-header">{{brewer.name}}</h2>
+<a ng-href="#/{{brewer.selector}}/location" class="brewerdetail-button button-map"><p class="brewerdetail-linktext">Locate Brewery</p></a>
+<a ng-href="tel:{{brewer.phone}}" class="brewerdetail-button button-phone" ><p class="brewerdetail-linktext">{{brewer.phone}}</p></a>
+<a ng-href="#/{{brewer.selector}}/shoppinglist" class="brewerdetail-button button-shopping" ><p class="brewerdetail-linktext">Local Shopping</p></a>
+<a ng-href="#/{{brewer.selector}}/dininglist" class="brewerdetail-button button-dining" ><p class="brewerdetail-linktext">Local Dining</p></a>
+<a ng-href="#/{{brewer.selector}}/weather" class="brewerdetail-button button-weather" ><p class="brewerdetail-linktext">Local Weather</p></a>
+<p class="brewerdetail-amazing">{{brewer.name}}:<br /> <span class="brewerdetail-small">{{brewer.address}}, {{brewer.city}}, {{brewer.state}}</span></p>

@@ -1,0 +1,31 @@
+.weather {
+    &-attribution {
+        @extend %attribution;
+    }
+    &-header {
+        @include span(12 of 12);
+        padding: rhythm(.25, 16px) 0;
+        @include type-scale(medium);
+        text-align: center;
+        color: $black;
+        border-top: .1em solid rgba($green, .3);
+        border-bottom: .1em solid rgba($green, .3);
+    }
+    &-forecast {
+        @extend .weather-header;
+        @include type-scale(base);
+        border-top: none;
+    }
+    &-description {
+        @include span(last 8 of 12);
+        @include type-scale(base);
+        margin-right: 0;
+        margin-left: 0;
+        color: $black;
+    }
+    &-skycons {
+        @include span(4 of 12);
+        margin-top: rhythm(1, 16px);
+        height: 64px;
+    }
+}

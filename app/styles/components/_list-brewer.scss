@@ -1,0 +1,33 @@
+.search {
+    @extend %lists;
+    padding: 0;
+    margin: rhythm(.5, 16px) 0;
+    border-bottom: none;
+    &-input {
+        width: 100%;
+        @include type-scale(medium);
+        margin: 0;
+        padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) span(1);
+        background: transparent;
+        border-top: transparent;
+        border-style: solid;
+        border-color: rgba($grey-blue, .5);
+        border-width: 0 0 .1em 0;
+        &:focus {
+            @include box-shadow(rgba($grey, 0.25) 0 .25em .25em 0);
+            border-width: 0 0 .3em 0;
+        }
+    }
+}
+.brewer-list {
+    @extend %lists;
+    &-image {
+        @extend %lists-image;
+    }
+    &-detail {
+        @extend %lists-detail;
+        &-small {
+            @extend %lists-detail-small;
+        }
+    }
+}

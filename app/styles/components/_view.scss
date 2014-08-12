@@ -1,0 +1,10 @@
+.view {
+    @include full;
+    width: 100%;
+    padding: 0 span(1);
+    margin-top: rhythm(3.33, 16px);
+    margin-left: 0;
+    margin-right: 0;
+    @include translateZ(5);
+    z-index: 5;
+}

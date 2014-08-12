@@ -1,0 +1,114 @@
+%font-helpers {
+font-kerning: normal;
+font-synthesis: none;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+}
+
+%nav-buttons {
+    @include span(2 of 12);
+    padding-top: rhythm(.4, 16px);
+    text-align: center;
+    @include adjust-font-size-to(28px);
+    text-decoration: none;
+    color: $yellow-lite;
+    text-shadow: 0 0 .5em $green-darker;
+    &:focus {
+        text-shadow: 0 0 1em $white;
+    }
+    &:active {
+        text-shadow: 0 0 1em $white;
+    }
+}
+
+%intro-links {
+    @include span(50%);
+    margin: 0;
+    text-align: center;
+    &:focus {
+        background-color: rgba($green, .75);
+    }
+    &:active {
+        background-color: rgba($green, .75);
+    }
+}
+
+%lists {
+    @include full;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding: rhythm(.5, 16px) 0;
+    border-bottom: .1em solid rgba($green, .15);
+    text-decoration: none;
+    &:focus {
+        background-color: rgba($green-dark, .5);
+    }
+    &:active {
+        background-color: rgba($green-dark, .5);
+    }
+}
+%lists-detail {
+    @include span(last 9 of 12);
+    margin-top: 0;
+    margin-bottom: 0;
+    @include type-scale(base);
+    color: $black;
+}
+%lists-detail-small {
+    @include span(9 of 12 last);
+    @include type-scale(tiny);
+    margin-bottom: 0;
+    color: $black;
+}
+%lists-image {
+    @include span(3 of 12);
+    height: 40px;
+    margin-right: 0;
+}
+
+%attribution {
+        $bleed: span(1)+gutter(13);
+        @include bleed-x($bleed);
+        text-align: center;
+        padding: rhythm(.5, 16px);
+        background-color: $attribution;
+        border-bottom: .1em solid rgba($grey-blue, .5);
+        a {
+            @include type-scale(small);
+            text-decoration: none;
+            color: $black;
+        }
+    }
+
+%inside-view {
+    $bleed: span(1)+gutter(13);
+    @include bleed-x($bleed);
+}
+// %search {
+//     @extend %base-font;
+//     width: 100%;
+//     height: rhythm(2, 16px);
+//     padding-left: span(1);
+//     margin-bottom: rhythm(.5, 16px);
+//     background: lighten($white, 5%);
+//     border-style: solid;
+//     border-color: $cyan;
+//     border-width: 0.1em 0 .1em 0;
+//     &:active {
+//         border-width: 0.15em 0 0.15em 0;
+//     }
+//     &:focus {
+//         border-width: 0.15em 0 0.15em 0;
+//     }
+// }
+
+// %closet {
+//     margin: 0 span(.5) rhythm(.5, 16px) span(.5);
+//     padding: rhythm(.25, 16px) span(.25);
+//     text-align: center;
+//     color: $black;
+//     border: .1em solid $purple;
+//     border-radius: .25em;
+//     background-color: rgba($yellow, .25);
+// }

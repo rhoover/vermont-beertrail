@@ -1,0 +1,10 @@
+body {
+    @include container;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    font-family: $MerriweatherSans;
+    // @extend %weight-ultralight;
+    @extend %font-helpers;
+    background-color: $white;
+}
