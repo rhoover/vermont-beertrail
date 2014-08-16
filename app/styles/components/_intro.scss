@@ -5,9 +5,13 @@
         color: $black;
         @include type-scale(base);
         &-header {
+            @extend %inside-view;
+            padding: rhythm(.25, 16px) 0;
             text-align: center;
             color: $black;
-            @include type-scale(medium);
+            @include type-scale(base);
+            border-top: .1em solid rgba($grey-blue, .5);
+            border-bottom: .1em solid rgba($grey-blue, .5);
         }
     }
     &-choose {
