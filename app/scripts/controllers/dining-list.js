@@ -10,7 +10,7 @@
 
 angular
     .module('vtbtApp')
-    .controller('ListDiningCtrl', function ($scope, $routeParams, $location, analyticsGoogle, storageFactory, appDataFilter, diningFactory) {
+    .controller('ListDiningCtrl', function ($scope, $routeParams, $location, storageFactory, appDataFilter, diningFactory) {
 
         $scope.brewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
 
@@ -20,5 +20,5 @@ angular
                 // storageFactory.storeData($routeParams.selector + '-' + 'dining-cache', data);
             });
 
-        analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
+        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
     });

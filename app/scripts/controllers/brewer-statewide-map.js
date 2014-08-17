@@ -9,9 +9,9 @@
  */
 
 angular.module('vtbtApp')
-    .controller('BrewerStatewideMapCtrl', function ($scope, $location, analyticsGoogle, storageFactory) {
+    .controller('BrewerStatewideMapCtrl', function ($scope, $location, storageFactory) {
 
         $scope.brewers = storageFactory.getData('brewer-list-cache');
 
-        analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
+        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
 });

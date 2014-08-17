@@ -10,9 +10,9 @@
 
 angular
     .module('vtbtApp')
-    .controller('ListBrewerCtrl', function ($scope, $location, analyticsGoogle, storageFactory) {
+    .controller('ListBrewerCtrl', function ($scope, $location, storageFactory) {
 
         $scope.brewerList = storageFactory.getData('brewer-list-cache');
 
-        analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
+        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
     });

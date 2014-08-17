@@ -10,7 +10,7 @@
 
 angular
     .module('vtbtApp')
-    .controller('WeatherCtrl', function ($scope, $routeParams, $location, analyticsGoogle,  storageFactory, appDataFilter, roundingNumbers) {
+    .controller('WeatherCtrl', function ($scope, $routeParams, $location, storageFactory, appDataFilter, roundingNumbers) {
 
         // $timeout(function () {
 
@@ -23,6 +23,6 @@ angular
 
         // }, 3000);
 
-        analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
+        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
 
     });

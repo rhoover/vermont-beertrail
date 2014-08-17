@@ -10,7 +10,7 @@
 
 angular
     .module('vtbtApp')
-    .controller('ListShoppingCtrl', function ($scope, $routeParams, $location, analyticsGoogle, storageFactory, appDataFilter, shoppingFactory) {
+    .controller('ListShoppingCtrl', function ($scope, $routeParams, $location, storageFactory, appDataFilter, shoppingFactory) {
 
         $scope.brewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
 
@@ -19,5 +19,5 @@ angular
                 $scope.shoppingList = data.businesses;
             });
 
-        analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
+        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
     });
