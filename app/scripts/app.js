@@ -33,6 +33,7 @@ angular
         $routeProvider
             .when('/', {
                 templateUrl: 'views/intro.html',
+                controller: 'IntroCtrl',
                 resolve: {
                     brewerResolve: brewers
                 }
