@@ -8,6 +8,7 @@
         text-align: center;
         color: $black;
         @include type-scale(medium);
+        margin-bottom: 0;
     }
     &-button {
         @include span(12 of 12);
@@ -17,7 +18,7 @@
         &:before {
             float: left;
             padding-left: span(2 of 12);
-            margin-top: rhythm(.25, 16px);
+            margin-top: rhythm(.65, 16px);
             color: $grey-blue;
         }
         &:active {
@@ -26,20 +27,15 @@
     }
     &-linktext {
         @include type-scale(base);
-        margin: rhythm(.25, 16px) 0;
+        margin: rhythm(.75, 16px) 0;
         text-align: left;
         padding-left: span(5 of 12);
     }
-    &-amazing {
-        @include full;
-        @include type-scale(base);
-        margin-top: rhythm(.5, 16px);
-        text-align: center;
-        color: $black;
-    }
     &-small {
-        @include type-weight(bold);
+        text-align: center;
         @include type-scale(small);
+        margin-top: 0;
+        margin-bottom: rhythm(1, 16px);
     }
 }
 

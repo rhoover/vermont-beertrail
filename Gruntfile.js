@@ -269,6 +269,9 @@ module.exports = function (grunt) {
           ],
           '<%= yeoman.dist %>/scripts/angular-rh.js': [
             '<%= yeoman.dist %>/scripts/angular-rh.js'
+          ],
+          '<%= yeoman.dist %>/data.vtbrewers.json': [
+            '<%= yeoman.dist %>/data.vtbrewers.json'
           ]
         }
       }
@@ -451,9 +454,9 @@ module.exports = function (grunt) {
     'concurrent:dist',
     // 'autoprefixer', --rh
     'concat',
+    'copy:dist', // --rh, order changed
     'uglify',
     // 'ngmin', --rh
-    'copy:dist',
     // 'cdnify', --rh
     'cssmin',
     'filerev',
