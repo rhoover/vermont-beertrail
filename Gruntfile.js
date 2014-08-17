@@ -269,9 +269,6 @@ module.exports = function (grunt) {
           ],
           '<%= yeoman.dist %>/scripts/angular-rh.js': [
             '<%= yeoman.dist %>/scripts/angular-rh.js'
-          ],
-          '<%= yeoman.dist %>/data.vtbrewers.json': [
-            '<%= yeoman.dist %>/data.vtbrewers.json'
           ]
         }
       }
