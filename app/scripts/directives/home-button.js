@@ -6,6 +6,7 @@
  * @description
  * # homebutton
  */
+
 angular
     .module('vtbtApp')
     .directive('homeButton', function ($location) {
