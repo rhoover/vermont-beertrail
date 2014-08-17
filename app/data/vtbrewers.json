@@ -558,5 +558,37 @@
         "facebook":"https://www.facebook.com/prohibitionpig",
         "twitter":"https://twitter.com/ProhibitionPig",
         "googleplus":""
+    },
+    {
+        "name": "Four Quarters Brewing",
+        "address": "150 West Canal Street",
+        "city": "Winooski",
+        "state": "VT",
+        "zip": "05404",
+        "latitude": 44.490157,
+        "longitude":  -73.192018,
+        "vba100": "images/brewer100/fourquarters.png",
+        "selector": "fourquarters",
+        "url":"http://www.fourquartersbrewing.com/",
+        "phone":"802.862.0775",
+        "facebook":"https://www.facebook.com/FourQuartersBrewing",
+        "twitter":"http://www.twitter.com/4quartersbrew",
+        "googleplus":"https://plus.google.com/109969977542498061735/about"
+    },
+    {
+        "name": "Hop'n Moose Brewing Co.",
+        "address": "41 Center Street",
+        "city": "Rutland",
+        "state": "VT",
+        "zip": "05701",
+        "latitude": 43.6067008  ,
+        "longitude":  -72.9775604,
+        "vba100": "images/brewer100/hopnmoose.png",
+        "selector": "hopnmoose",
+        "url":"http://www.hopnmoose.com/",
+        "phone":"802.775-7063",
+        "facebook":"https://www.facebook.com/hopn.moose",
+        "twitter":"https://twitter.com/HopnMoose",
+        "googleplus":""
     }
 ]
