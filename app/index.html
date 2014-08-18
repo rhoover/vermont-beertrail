@@ -28,6 +28,18 @@
         <meta name='apple-touch-fullscreen' content='yes'>
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+        <!-- Icons -->
+        <link rel="shortcut icon" sizes="512x512" href="images/trail-sign.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+
+        <!-- Icon actually for Android -->
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+
+        <!-- For Apple Start-Up Image-->
+        <link rel="apple-touch-startup-image" href="/startup-image.png">
         <!-- Twitter -->
         <meta property="twitter:title" content="Vermont Beer Trail" />
         <meta property="twitter:image" content="http://www.vtbeertrail.com/icons/trail-sign.png" />
@@ -43,18 +55,6 @@
         <meta property="og:site_name" content="Vermont Beer Trail" />
         <meta property="og:locale" content="en_US" />
 
-        <!-- Icons -->
-        <link rel="shortcut icon" sizes="512x512" href="icons/trail-sign.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
-
-        <!-- Icon actually for Android -->
-        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-
-        <!-- For Apple Start-Up Image-->
-        <link rel="apple-touch-startup-image" href="/startup-image.png">
 
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
@@ -72,41 +72,6 @@
     </header>
 
     <main ng-view class="view"></main>
-
-    <!-- Google Analytics Old
-    <script>
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-53728304-1']);
-
-            (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-            })();
-    </script>
-    -->
-
-    <!-- Google Analytics New-->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-53728304-1', 'auto');
-        // ga('send', 'pageview');
-
-    </script>
 
     <!-- build:js(.) scripts/thirdparty.js -->
     <script src="bower_components/skycons/skycons.js"></script>
@@ -160,5 +125,41 @@
     <script src="scripts/directives/telephone-call.js"></script>
     <script src="scripts/directives/google-screenview.js"></script>
     <!-- endbuild -->
+
+
+    <!-- Google Analytics Old
+    <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-53728304-1']);
+
+            (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+            })();
+    </script>
+    -->
+
+    <!-- Google Analytics New-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-53728304-1', 'auto');
+        // ga('send', 'pageview');
+
+    </script>
     </body>
 </html>
