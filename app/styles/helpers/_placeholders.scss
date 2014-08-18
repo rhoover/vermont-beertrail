@@ -85,3 +85,8 @@ text-rendering: optimizeLegibility;
     $bleed: span(1)+gutter(13);
     @include bleed-x($bleed);
 }
+
+%inside-view-medium {
+    $bleed: span(3)+gutter(13);
+    @include bleed-x($bleed);
+}

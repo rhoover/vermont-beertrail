@@ -1,5 +1,8 @@
 .intro {
-    @include span(12 of 12);
+    @include full;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     &-description {
         text-align: center;
         color: $black;
@@ -12,10 +15,16 @@
             @include type-scale(base);
             border-top: .1em solid rgba($grey-blue, .5);
             border-bottom: .1em solid rgba($grey-blue, .5);
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                $bleed: span(6)+gutter(4);
+                @include bleed-x($bleed);
+                @include type-scale(large);
+            }
         }
     }
     &-choose {
-        @include span(12 of 12);
+        @include full;
+        width: 100%;
         margin-top: rhythm(1, 16px);
         margin-right: 0;
         margin-left: 0;
@@ -30,9 +39,15 @@
             &-left {
                 @extend %intro-links;
                 border-right: .1em solid $green-dark;
+                @include susy-breakpoint($bp-medium, $columns-medium) {
+                    @include type-scale(base);
+                }
             }
             &-right {
                 @extend %intro-links;
+                @include susy-breakpoint($bp-medium, $columns-medium) {
+                    @include type-scale(base);
+                }
             }
         }
     }

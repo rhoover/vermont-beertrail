@@ -3,6 +3,10 @@
         @extend %attribution;
         min-height: rhythm(1, 16px);
         text-align: center;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            $bleed: span(6)+gutter(4);
+            @include bleed-x($bleed);
+        }
         &-link {
             @include span(9 of 12);
             @include type-scale(small);
@@ -11,6 +15,9 @@
     }
     &-list-item {
         @extend %lists;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            padding-left: span(3 of 18);
+        }
         &-image {
             @extend %lists-image;
             @include span(2 of 12);

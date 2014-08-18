@@ -1,6 +1,10 @@
 .weather {
     &-attribution {
         @extend %attribution;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            $bleed: span(6)+gutter(3.5);
+            @include bleed-x($bleed);
+        }
     }
     &-header {
         @include span(12 of 12);
@@ -27,5 +31,10 @@
         @include span(4 of 12);
         margin-top: rhythm(1, 16px);
         height: 64px;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(3 of 18);
+            margin-left: span(3 of 18);
+            margin-top: rhythm(.5, 16px);
+        }
     }
 }

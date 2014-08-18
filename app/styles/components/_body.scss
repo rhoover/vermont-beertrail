@@ -4,7 +4,9 @@ body {
     margin-bottom: 0;
     height: 100%;
     font-family: $MerriweatherSans;
-    // @extend %weight-ultralight;
     @extend %font-helpers;
     background-color: $white;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include show-grid(18);
+    }
 }

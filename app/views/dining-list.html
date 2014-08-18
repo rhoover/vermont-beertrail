@@ -3,7 +3,7 @@
     <div class="brewer40-yelp"></div>
 </section>
 <section class="search">
-    <input class="search-input" placeholder="Search: Name, Road or Town" ng-model="search.$">
+    <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
 </section>
 <section class="spinner" loading-spinner-widget></section>
 <a ng-href="#/{{brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in diningList | orderBy:  '+name' | filter:search:strict  track by $index">
