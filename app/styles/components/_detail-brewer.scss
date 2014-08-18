@@ -18,7 +18,7 @@
         &:before {
             float: left;
             padding-left: span(2 of 12);
-            margin-top: rhythm(.65, 16px);
+            margin-top: rhythm(.25, 16px);
             color: $grey-blue;
         }
         &:active {
@@ -27,7 +27,7 @@
     }
     &-linktext {
         @include type-scale(base);
-        margin: rhythm(.75, 16px) 0;
+        margin: rhythm(.35, 16px) 0;
         text-align: left;
         padding-left: span(5 of 12);
     }

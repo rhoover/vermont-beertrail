@@ -6,7 +6,7 @@
     position: fixed;
     z-index: 50;
     @include background-image(linear-gradient($green, lighten($green-dark, 3%) ));
-    border-bottom: .1em solid $green-darker;
+    border-bottom: .1em solid $black;
     &-back-button {
         @extend %nav-buttons;
         @include icon('before', true, 'back');
@@ -14,6 +14,8 @@
     &-heading {
         @include span(8 of 12);
         @include type-scale(large);
+        margin-top: rhythm(.25, 16px);
+        margin-bottom: rhythm(.25, 16px);
         color: $white;
         text-align: center;
     }

@@ -1,6 +1,6 @@
 <section google-screenview>
     <section class="search" >
-        <input class="search-input" placeholder="Search: Name, Road or Town" ng-model="search.$">
+        <input class="search-input" placeholder="Search: Whatever" ng-model="search.$">
     </section>
     <section class="spinner" loading-spinner-widget></section>
     <a ng-href="#/{{brewer.selector}}" ng-repeat="brewer in brewerList |orderBy : 'selector' | filter:search:strict track by $index" class="brewer-list">

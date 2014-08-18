@@ -42,7 +42,7 @@
         "vba100": "images/brewer100/backacrebeer.png",
         "selector": "backacrebeer",
         "url":"http://www.backacrebeermakers.com/",
-        "phone":"",
+        "phone":"Unknown",
         "facebook":"",
         "twitter":"",
         "googleplus":""
@@ -74,7 +74,7 @@
         "vba100": "images/brewer100/coveredbridge.png",
         "selector": "coveredbridge",
         "url":"http://www.coveredbridgebrew.com/",
-        "phone":"",
+        "phone":"Unknown",
         "facebook":"https://www.facebook.com/pages/Covered-Bridge-Brewing/125177654161845",
         "twitter":"",
         "googleplus":""

@@ -7,7 +7,7 @@ text-rendering: optimizeLegibility;
 
 %nav-buttons {
     @include span(2 of 12);
-    padding-top: rhythm(.4, 16px);
+    padding-top: rhythm(.25, 16px);
     text-align: center;
     @include adjust-font-size-to(28px);
     text-decoration: none;
@@ -85,30 +85,3 @@ text-rendering: optimizeLegibility;
     $bleed: span(1)+gutter(13);
     @include bleed-x($bleed);
 }
-// %search {
-//     @extend %base-font;
-//     width: 100%;
-//     height: rhythm(2, 16px);
-//     padding-left: span(1);
-//     margin-bottom: rhythm(.5, 16px);
-//     background: lighten($white, 5%);
-//     border-style: solid;
-//     border-color: $cyan;
-//     border-width: 0.1em 0 .1em 0;
-//     &:active {
-//         border-width: 0.15em 0 0.15em 0;
-//     }
-//     &:focus {
-//         border-width: 0.15em 0 0.15em 0;
-//     }
-// }
-
-// %closet {
-//     margin: 0 span(.5) rhythm(.5, 16px) span(.5);
-//     padding: rhythm(.25, 16px) span(.25);
-//     text-align: center;
-//     color: $black;
-//     border: .1em solid $purple;
-//     border-radius: .25em;
-//     background-color: rgba($yellow, .25);
-// }
