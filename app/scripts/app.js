@@ -106,6 +106,10 @@ angular
             });
     }) //end routing config block
 
+    .config(function ($locationProvider) {
+        $locationProvider.hashPrefix('!');
+    })
+
     .provider('loadingSpinner', function () {
         //Inspired by and courtesy of: http://www.kvetis.com/2014/01/angularjs-loading-widget.html
         //I wish this weren't here, but for reasons that escape me Angular isn't recognizing the provider module as an injectable into the below config block

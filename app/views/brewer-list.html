@@ -3,7 +3,7 @@
         <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
     </section>
     <section class="spinner" loading-spinner-widget></section>
-    <a ng-href="#/{{brewer.selector}}" ng-repeat="brewer in brewerList |orderBy : 'selector' | filter:search:strict track by $index" class="brewer-list">
+    <a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in brewerList |orderBy : 'selector' | filter:search:strict track by $index" class="brewer-list">
         <div class=" brewer-list-image brewer40-{{brewer.selector}}"></div>
         <p class="brewer-list-detail">{{brewer.name}}</p>
         <p class="brewer-list-detail brewer-list-detail-small">{{brewer.address}}</p>
