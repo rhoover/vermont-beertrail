@@ -8,8 +8,10 @@
     margin-right: 0;
     @include translateZ(5);
     z-index: 5;
-    @include susy-breakpoint($bp-medium, $columns-medium);
     @include susy-breakpoint($bp-medium, $columns-medium) {
         padding: 0 span(4 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        padding: 0 span(6 of 24);
     }
 }

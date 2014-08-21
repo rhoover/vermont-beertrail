@@ -24,6 +24,9 @@
     @include susy-breakpoint($bp-medium, $columns-medium) {
         padding-left: span(3 of 18);
     }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        padding-left: span(3 of 24);
+    }
     &-image {
         @extend %lists-image;
     }

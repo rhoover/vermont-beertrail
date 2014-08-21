@@ -20,6 +20,9 @@
                 @include bleed-x($bleed);
                 @include type-scale(large);
             }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include type-scale(large);
+            }
         }
     }
     &-choose {
@@ -31,6 +34,11 @@
         background-color: rgba($green, .25);
         border-radius: .25em;
         border: .1em solid $green-dark;
+        @include susy-breakpoint($bp-large, $columns-large) {
+            @include span(12 of 24);
+            margin-left: span(6 of 24);
+            margin-right: span(6 of 24);
+        }
         &-link {
             padding: rhythm(.5, 16px) gutter(6);
             @include type-scale(small);
@@ -42,12 +50,18 @@
                 @include susy-breakpoint($bp-medium, $columns-medium) {
                     @include type-scale(base);
                 }
+                // @include susy-breakpoint($bp-large, $columns-large) {
+                //     @include span(25%);
+                // }
             }
             &-right {
                 @extend %intro-links;
                 @include susy-breakpoint($bp-medium, $columns-medium) {
                     @include type-scale(base);
                 }
+                // @include susy-breakpoint($bp-large, $columns-large) {
+                //     @include span(25%);
+                // }
             }
         }
     }

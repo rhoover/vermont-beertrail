@@ -1,9 +1,8 @@
 .header {
-    @include full;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
     position: fixed;
+    top: 0px;
+    width: 100%;
+    @include clearfix;
     z-index: 50;
     @include background-image(linear-gradient($green, lighten($green-dark, 3%) ));
     border-bottom: .1em solid $black;

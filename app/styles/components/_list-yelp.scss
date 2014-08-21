@@ -2,15 +2,22 @@
     &-attribution {
         @extend %attribution;
         min-height: rhythm(1, 16px);
-        text-align: center;
         @include susy-breakpoint($bp-medium, $columns-medium) {
             $bleed: span(6)+gutter(4);
             @include bleed-x($bleed);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            $bleed: span(10)+gutter(2.3);
+            @include bleed-x($bleed);
+            text-align: left;
         }
         &-link {
             @include span(9 of 12);
             @include type-scale(small);
             padding-top: rhythm(.25, 16px);
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(6 of 24);
+            }
         }
     }
     &-list-item {
@@ -21,6 +28,10 @@
         &-image {
             @extend %lists-image;
             @include span(2 of 12);
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(2 of 24);
+                margin-left: span(3 of 24);
+            }
         }
         &-details {
             @extend %lists-detail;

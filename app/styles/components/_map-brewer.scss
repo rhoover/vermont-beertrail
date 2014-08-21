@@ -9,6 +9,10 @@
         @include bleed-x($bleed);
         height: 100vh;
     }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        $bleed: span(10)+gutter(2.3);
+        @include bleed-x($bleed);
+    }
     &-header {
         @extend %inside-view;
         min-height: rhythm(2.6, 16px);
@@ -20,11 +24,19 @@
             $bleed: span(6)+gutter(3.5);
             @include bleed-x($bleed);
         }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            $bleed: span(10)+gutter(2.3);
+            @include bleed-x($bleed);
+        }
         &-image {
             @extend %lists-image;
             margin-top: rhythm(.5, 16px);
             @include susy-breakpoint($bp-medium, $columns-medium) {
                 margin-left: span(3 of 18);
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(3 of 24);
+                margin-left: span(9 of 24);
             }
         }
         &-text {
@@ -37,6 +49,9 @@
             @include susy-breakpoint($bp-medium, $columns-medium) {
                 @include span(9 of 18);
             }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(12 of 24);
+            }
             &-small {
                 @include span(9 of 12);
                 @include type-scale(small);
@@ -44,6 +59,9 @@
                 color: $black;
                 @include susy-breakpoint($bp-medium, $columns-medium) {
                     @include span(9 of 18);
+                }
+                @include susy-breakpoint($bp-large, $columns-large) {
+                    @include span(12 of 24);
                 }
             }
         }

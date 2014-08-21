@@ -5,6 +5,11 @@
             $bleed: span(6)+gutter(3.5);
             @include bleed-x($bleed);
         }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            $bleed: span(10)+gutter(2.3);
+            @include bleed-x($bleed);
+            text-align: left;
+        }
     }
     &-header {
         @include span(12 of 12);
@@ -14,6 +19,9 @@
         color: $black;
         border-top: .1em solid rgba($green, .3);
         border-bottom: .1em solid rgba($green, .3);
+        @include susy-breakpoint($bp-large, $columns-large) {
+            text-align: left;
+        }
     }
     &-forecast {
         @extend .weather-header;
@@ -35,6 +43,10 @@
             @include span(3 of 18);
             margin-left: span(3 of 18);
             margin-top: rhythm(.5, 16px);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            @include span(3 of 24);
+            margin-left: span(3 of 24);
         }
     }
 }
