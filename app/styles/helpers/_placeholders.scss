@@ -90,3 +90,19 @@ text-rendering: optimizeLegibility;
     $bleed: span(3)+gutter(13);
     @include bleed-x($bleed);
 }
+
+%responsive-trigger {
+    &:after {
+        content: "phone";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -1000px;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            content: "tablet";
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            content: "computer";
+        }
+    }
+}

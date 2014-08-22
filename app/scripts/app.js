@@ -108,6 +108,7 @@ angular
 
     .config(function ($locationProvider) {
         $locationProvider.hashPrefix('!');
+        // $locationProvider.html5Mode(true);
     })
 
     .provider('loadingSpinner', function () {

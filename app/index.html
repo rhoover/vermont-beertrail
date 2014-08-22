@@ -1,13 +1,16 @@
 <!doctype html>
-<html class="no-js">
+<html ng-app="vtbtApp">
     <head>
         <!-- Generic -->
         <meta charset="utf-8"/>
         <title>VT Beer Trail</title>
         <meta content="index, follow" name="robots"></meta>
-        <meta name="fragment" content="#">
-        <meta name="description" content="A Comprehensive Reference For Vermont's Brewers and Their Communities">
+        <!-- <meta name="fragment" content="#"> -->
+        <meta name="description" content="A Comprehensive Mobile Reference For Vermont's Brewers and Their Communities">
         <meta name="author" content="Robin Hoover - MooseDog Studios - Stowe, VT - robin.hoover@gmail.com">
+        <!-- required for html5 history api link mode
+        <base href="/"></base>
+        <meta name="fragment" content="!"> -->
 
         <!-- Devices -->
         <meta name="HandheldFriendly" content="True">
@@ -44,14 +47,14 @@
         <meta property="twitter:title" content="Vermont Beer Trail" />
         <meta property="twitter:image" content="http://www.vtbeertrail.com/icons/trail-sign.png" />
         <meta property="twitter:url" content="http://www.vtbeertrail.com" />
-        <meta property="twitter:description" content="A Comprehensive Reference For Vermont's Brewers and Their Communities" />
+        <meta property="twitter:description" content="A Comprehensive Mobile Reference For Vermont's Brewers and Their Communities" />
 
         <!-- Facebook -->
         <meta property="og:title" content="Vermont Beer Trail" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="http://www.vtbeertrail.com/icons/trail-sign.png" />
         <meta property="og:url" content="http://www.vtbeertrail.com" />
-        <meta property="og:description" content="A Comprehensive Reference For Vermont's Brewers and Their Communities" />
+        <meta property="og:description" content="A Comprehensive Mobile Reference For Vermont's Brewers and Their Communities" />
         <meta property="og:site_name" content="Vermont Beer Trail" />
         <meta property="og:locale" content="en_US" />
 
@@ -59,11 +62,9 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-        <!-- required for html5 history api link mode
-        <base href="/"></base>  -->
     </head>
 
-    <body ng-app="vtbtApp">
+    <body>
 
     <header class="header">
         <span back-button class="header-back-button"></span>
@@ -124,6 +125,7 @@
     <script src="scripts/directives/loading-spinner.js"></script>
     <script src="scripts/directives/telephone-call.js"></script>
     <script src="scripts/directives/google-screenview.js"></script>
+    <!-- // <script src="scripts/directives/responsive-trigger.js"></script> -->
     <!-- endbuild -->
 
     <!-- Google Analytics New-->

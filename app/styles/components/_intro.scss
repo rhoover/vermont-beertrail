@@ -66,3 +66,15 @@
         }
     }
 }
+
+.caveat {
+    display: none;
+    @include susy-breakpoint($bp-large, $columns-large) {
+        display: block;
+        @include full;
+        padding-top: rhythm(2, 16px);
+        @include type-scale(small);
+        text-align: center;
+        color: $black;
+    }
+}
