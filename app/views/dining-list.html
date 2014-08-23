@@ -6,7 +6,7 @@
     <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
 </section>
 <section class="spinner" loading-spinner-widget></section>
-<a ng-href="#!/{{brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in diningList | orderBy:  '+name' | filter:search:strict  track by $index">
+<a ng-href="#!/{{brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in diningList | filter:search:strict  track by $index">
     <img ng-src="{{dining.photo_url_small}}" class="yelp-list-item-image" />
     <p class="yelp-list-item-details">{{dining.name}}</p>
     <p class="yelp-list-item-details-small">{{dining.address1}}</p>

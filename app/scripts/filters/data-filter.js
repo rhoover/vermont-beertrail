@@ -21,6 +21,7 @@ angular
                         this.push(brewerObject);
                     }
                 }, outBrewerData);
+
                 return outBrewerData.shift(); //pulls object out of array
             },
             business: function (input, arg) {
@@ -31,7 +32,42 @@ angular
                         this.push(businessObject);
                     }
                 }, outBusinessData);
+
                 return outBusinessData.shift();
+            },
+            brewerList: function (input) {
+
+                var sortedBrewers= [];
+                sortedBrewers = input.sort(function (a, b) {
+                    if (a.selector < b.selector)
+                        {
+                            return -1;
+                        }
+                    if (a.selector > b.selector)
+                        {
+                            return 1;
+                        }
+                    return 0;
+                });
+
+                return sortedBrewers;
+            },
+            businessList: function (input) {
+
+                var sortedBusinesses= [];
+                sortedBusinesses = input.sort(function (a, b) {
+                    if (a.name < b.name)
+                        {
+                            return -1;
+                        }
+                    if (a.name > b.name)
+                        {
+                            return 1;
+                        }
+                    return 0;
+                });
+
+                return sortedBusinesses;
             }
         }; //end return
     });

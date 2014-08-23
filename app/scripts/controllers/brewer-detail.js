@@ -14,5 +14,4 @@ angular
 
         $scope.brewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
 
-        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
     });
