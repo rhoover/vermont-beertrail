@@ -26,6 +26,9 @@
     }
     @include susy-breakpoint($bp-large, $columns-large) {
         padding-left: span(3 of 24);
+        &:hover {
+            background-color: rgba($grey-blue, .25);
+        }
     }
     &-image {
         @extend %lists-image;

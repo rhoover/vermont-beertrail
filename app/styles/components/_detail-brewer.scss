@@ -24,8 +24,8 @@
         @include susy-breakpoint($bp-large, $columns-large) {
             @include span(24 of 24 no-gutters);
             &:hover {
-                background-color: rgba($green-dark, .5);
-                color: $green-white;
+                color: $black;
+                @include type-weight(bold);
             }
         }
         &:before {

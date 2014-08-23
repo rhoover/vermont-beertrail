@@ -9,6 +9,7 @@
     &-back-button {
         @extend %nav-buttons;
         @include icon('before', true, 'back');
+        cursor: pointer;
     }
     &-heading {
         @include span(8 of 12);
@@ -21,5 +22,6 @@
     &-home-button {
         @extend %nav-buttons;
         @include icon('before', true, 'home');
+        cursor: pointer;
     }
 }
