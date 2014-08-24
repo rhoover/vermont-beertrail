@@ -13,5 +13,4 @@ angular.module('vtbtApp')
 
         $scope.brewers = storageFactory.getData('brewer-list-cache');
 
-        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
 });
