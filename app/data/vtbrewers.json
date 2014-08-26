@@ -581,14 +581,30 @@
         "city": "Rutland",
         "state": "VT",
         "zip": "05701",
-        "latitude": 43.6067008  ,
+        "latitude": 43.6067008,
         "longitude":  -72.9775604,
         "vba100": "images/brewer100/hopnmoose.png",
         "selector": "hopnmoose",
         "url":"http://www.hopnmoose.com/",
-        "phone":"802.775-7063",
+        "phone":"802.775.7063",
         "facebook":"https://www.facebook.com/hopn.moose",
         "twitter":"https://twitter.com/HopnMoose",
+        "googleplus":""
+    },
+    {
+        "name": "Bent Hill Brewery",
+        "address": "1972 Bent Hill Road",
+        "city": "Braintree Hill",
+        "state": "VT",
+        "zip": "05060",
+        "latitude": 43.98138,
+        "longitude":  -72.720955,
+        "vba100": "images/brewer100/benthill.png",
+        "selector": "benthill",
+        "url":"http://www.benthillbrewery.com/",
+        "phone":"802.249.1125",
+        "facebook":"https://www.facebook.com/BentHillBrewery",
+        "twitter":"https://twitter.com/BentHillBrewery",
         "googleplus":""
     }
 ]
