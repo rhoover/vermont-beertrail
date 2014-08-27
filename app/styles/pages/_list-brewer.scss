@@ -1,13 +1,11 @@
 .search {
     @extend %lists;
-    padding: 0;
-    margin: rhythm(.5, 16px) 0;
     border-bottom: none;
     &-input {
-        width: 100%;
-        @include type-scale(medium);
+        @include span(12 wide of 12 no-gutters);
         margin: 0;
         padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) span(1);
+        @include type-scale(medium);
         background: transparent;
         border-top: transparent;
         border-style: solid;

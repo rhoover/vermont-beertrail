@@ -13,9 +13,6 @@ text-rendering: optimizeLegibility;
     text-decoration: none;
     color: $yellow-lite;
     text-shadow: 0 0 .5em $green-darker;
-    // &:focus {
-    //     text-shadow: 0 0 1em $white;
-    // }
     &:active {
         text-shadow: 0 0 1em $white;
     }
@@ -34,13 +31,16 @@ text-rendering: optimizeLegibility;
 }
 
 %lists {
-    @include full;
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-    padding: rhythm(.5, 16px) 0;
-    border-bottom: .1em solid rgba($green, .15);
+    @include span(12 wide of 12 no-gutters);
+    padding: rhythm(.47, 16px) 0;
+    border-bottom: .1em solid rgba($green, .25);
     text-decoration: none;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 wide of 18 no-gutters);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 wide of 24 no-gutters);
+    }
     &:focus {
         background-color: rgba($green-dark, .5);
     }
@@ -50,15 +50,12 @@ text-rendering: optimizeLegibility;
 }
 %lists-detail {
     @include span(last 9 of 12);
-    margin-top: 0;
-    margin-bottom: 0;
     @include type-scale(base);
     color: $black;
 }
 %lists-detail-small {
-    @include span(9 of 12 last);
+    @include span(last 9 of 12);
     @include type-scale(tiny);
-    margin-bottom: 0;
     color: $black;
 }
 %lists-image {
@@ -70,6 +67,7 @@ text-rendering: optimizeLegibility;
 %attribution {
         $bleed: span(1)+gutter(13);
         @include bleed-x($bleed);
+        margin-top: rhythm(-.33, 16px);
         text-align: center;
         padding: rhythm(.5, 16px);
         background-color: $attribution;

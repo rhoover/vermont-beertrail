@@ -7,7 +7,7 @@
             @include bleed-x($bleed);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
-            $bleed: span(10)+gutter(2.3);
+            $bleed: span(10)+gutter(1.7);
             @include bleed-x($bleed);
             text-align: left;
         }
@@ -26,13 +26,14 @@
             padding-left: span(3 of 18);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
+          padding-left: span(3 of 24);
           &:hover {
             background-color: rgba($grey-blue, .25);
           }
         }
         &-image {
             @extend %lists-image;
-            @include span(2 of 12);
+            // @include span(2 of 12);
             @include susy-breakpoint($bp-large, $columns-large) {
                 @include span(2 of 24);
                 margin-left: span(3 of 24);

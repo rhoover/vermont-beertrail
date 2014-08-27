@@ -1,11 +1,16 @@
 .header {
     position: fixed;
     top: 0px;
-    width: 100%;
-    @include clearfix;
+    @include span(12 wide of 12 no-gutters); //aka width-100%, no margins
     z-index: 50;
     @include background-image(linear-gradient($green, lighten($green-dark, 3%) ));
     border-bottom: .1em solid $black;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 wide of 18 no-gutters);
+    }
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(24 wide of 24 no-gutters);
+    }
     &-back-button {
         @extend %nav-buttons;
         @include icon('before', true, 'back');

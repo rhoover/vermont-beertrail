@@ -1,12 +1,13 @@
 body {
     @include container;
-    margin-top: 0;
-    margin-bottom: 0;
     height: 100%;
     font-family: $MerriweatherSans;
     @extend %font-helpers;
     background-color: $white;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include show-grid(18);
+    }
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include show-grid(24);
     }
 }

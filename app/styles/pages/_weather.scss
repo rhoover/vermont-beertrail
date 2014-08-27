@@ -1,3 +1,4 @@
+.weather {
     &-attribution {
         @extend %attribution;
         @include susy-breakpoint($bp-medium, $columns-medium) {
@@ -11,9 +12,9 @@
         }
     }
     &-header {
-        @include span(12 of 12);
         padding: rhythm(.25, 16px) 0;
         @include type-scale(medium);
+        margin: rhythm(.5, 16px) 0;
         text-align: center;
         color: $black;
         border-top: .1em solid rgba($green, .3);
@@ -23,6 +24,7 @@
         }
     }
     &-forecast {
+        @include span(12 of 12);
         @extend .weather-header;
         @include type-scale(base);
         border-top: none;
@@ -30,8 +32,7 @@
     &-description {
         @include span(last 8 of 12);
         @include type-scale(base);
-        margin-right: 0;
-        margin-left: 0;
+        margin-top: rhythm(1, 16px);
         color: $black;
     }
     &-skycons {
