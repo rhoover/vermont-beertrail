@@ -16,15 +16,16 @@
 @import "helpers/placeholders";
 @import "helpers/sprites";
 
+@import "animations/view";
+
 @import "components/body";
 @import "components/header";
 @import "components/view";
-@import "components/intro";
-@import "components/list-brewer";
-@import "components/detail-brewer";
-@import "components/map-brewer";
-@import "components/map-business";
-@import "components/weather";
-@import "components/list-yelp";
 
-@import "animations/view";
+@import "pages/intro";
+@import "pages/list-brewer";
+@import "pages/detail-brewer";
+@import "pages/map-brewer";
+@import "pages/map-business";
+@import "pages/weather";
+@import "pages/list-yelp";

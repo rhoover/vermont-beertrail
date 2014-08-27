@@ -1,4 +1,3 @@
-.weather {
     &-attribution {
         @extend %attribution;
         @include susy-breakpoint($bp-medium, $columns-medium) {
