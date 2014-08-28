@@ -5,9 +5,9 @@
 <h3 class="weather-header">Currently in {{brewer.city}}:</h3>
 <weather-skycons skycon="{{weather.currently.icon}}" class="weather-skycons"></weather-skycons>
 <p class="weather-description">{{weather.currently.summary}} and {{temp}}&#176;, with a chance of precipitation of {{weather.currently.precipProbability}}%</p>
-<h4 class="weather-forecast">Forecast, The Rest of Today:</h4>
+<h4 class="weather-forecast">The Rest of Today:</h4>
 <weather-skycons skycon="{{weather.hourly.icon}}" class="weather-skycons"></weather-skycons>
 <p class="weather-description">{{weather.hourly.summary}}</p>
-<h4 class="weather-forecast">Forecast, Tomorrow:</h4>
+<h4 class="weather-forecast">Tomorrow:</h4>
 <weather-skycons skycon="{{weather.daily.data[2].icon}}" class="weather-skycons"></weather-skycons>
 <p class="weather-description">{{weather.daily.data[2].summary}} High temperatures around {{maxTemp}}&#176;</p>

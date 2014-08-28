@@ -15,11 +15,11 @@
     }
     &-header {
         @extend %inside-view;
+        margin-top: rhythm(-.33, 16px);
         min-height: rhythm(2.6, 16px);
         border-bottom: .1em solid $green;
         background-color: $attribution;
         @include translateZ(25);
-        z-index: 25;
         @include susy-breakpoint($bp-medium, $columns-medium) {
             $bleed: span(6)+gutter(3.5);
             @include bleed-x($bleed);

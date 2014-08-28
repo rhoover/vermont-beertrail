@@ -26,7 +26,7 @@
     &-forecast {
         @include span(12 of 12);
         @extend .weather-header;
-        @include type-scale(base);
+        // @include type-scale(base);
         border-top: none;
     }
     &-description {
