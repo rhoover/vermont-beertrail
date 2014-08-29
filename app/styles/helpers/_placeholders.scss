@@ -80,7 +80,7 @@ text-rendering: optimizeLegibility;
     }
 
 %inside-view {
-    $bleed: span(1)+gutter(13);
+    $bleed: span(1)+gutter(12);
     @include bleed-x($bleed);
 }
 
@@ -90,7 +90,7 @@ text-rendering: optimizeLegibility;
 }
 
 %responsive-trigger {
-    &:after {
+    &::after {
         content: "phone";
         display: block;
         position: absolute;

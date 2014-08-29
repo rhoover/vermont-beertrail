@@ -43,7 +43,7 @@
             padding: rhythm(.5, 16px) gutter(6);
             @include type-scale(small);
             text-decoration: none;
-            color: $black;
+            color: $white;
             &-left {
                 @extend %intro-links;
                 border-right: .1em solid $green-dark;
@@ -63,6 +63,9 @@
 
 .caveat {
     display: none;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: none;
+    }
     @include susy-breakpoint($bp-large, $columns-large) {
         display: block;
         @include span(24 wide of 24 no-gutters);
@@ -73,4 +76,35 @@
             padding-top: rhythm(2, 16px);
         }
     }
+}
+
+.headerhome {
+    @include type-weight(bold);
+    background-color: rgba(255,255,255,.5);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include type-weight(regular);
+        background-color: transparent;
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include type-weight(regular);
+        background-color: transparent;
+    }
+}
+
+.texthome {
+    color: $white;
+    text-shadow: 0px 0px 2px $black;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        color: $black;
+        text-shadow: 0px 0px 1px transparent;
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        color: $black;
+        text-shadow: 0px 0px 1px transparent;
+    }
+}
+
+.choosehome {
+    background-color: $green;
+        border: .1em solid $black;
 }

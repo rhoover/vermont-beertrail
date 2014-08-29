@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="vtbtApp">
+<html ng-app="vtbtApp"  res-trigger>
     <head>
         <!-- Generic -->
         <meta charset="utf-8"/>
@@ -64,7 +64,7 @@
         <!-- endbuild -->
     </head>
 
-    <body>
+    <body  class ="body" ng-controller="HomeBodyCtrl" ng-class="{'bodyhome': isHome('/')}">
 
     <header class="header">
         <span back-button class="header-back-button"></span>
@@ -106,6 +106,7 @@
 
     <script src="scripts/filters/data-filter.js"></script>
 
+    <script src="scripts/controllers/home-body.js"></script>
     <script src="scripts/controllers/brewer-list.js"></script>
     <script src="scripts/controllers/brewer-detail.js"></script>
     <script src="scripts/controllers/brewer-detail-map.js"></script>
@@ -125,7 +126,7 @@
     <script src="scripts/directives/loading-spinner.js"></script>
     <script src="scripts/directives/telephone-call.js"></script>
     <script src="scripts/directives/google-screenview.js"></script>
-    <!-- // <script src="scripts/directives/responsive-trigger.js"></script> -->
+    <script src="scripts/directives/responsive-trigger.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics New-->
