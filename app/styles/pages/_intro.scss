@@ -1,12 +1,14 @@
 .intro {
+    padding-top: rhythm(1, 16px);
     &-description {
+        padding: rhythm(.5, 16px) 0;
         text-align: center;
         color: $black;
         @include type-scale(base);
         &-header {
             @extend %inside-view;
             @include type-scale(large);
-            margin-bottom: rhythm(.2, 16px);
+            margin-bottom: rhythm(.7, 16px);
             text-align: center;
             color: $black;
             border-top: .1em solid rgba($grey-blue, .5);
@@ -27,6 +29,11 @@
         background-color: rgba($green, .25);
         border-radius: .25em;
         border: .1em solid $green-dark;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(14 wide of 18 no-gutters);
+            margin-left: span(2 of 18);
+            margin-right: span(2 of 18);
+        }
         @include susy-breakpoint($bp-large, $columns-large) {
             @include span(12 of 24);
             margin-left: span(6 of 24);
@@ -58,7 +65,7 @@
     display: none;
     @include susy-breakpoint($bp-large, $columns-large) {
         display: block;
-        @include full;
+        @include span(24 wide of 24 no-gutters);
         @include type-scale(small);
         text-align: center;
         color: $black;

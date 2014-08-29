@@ -1,6 +1,7 @@
 body {
     @include container;
-    height: 100%;
+    // height: 100%;
+    height: 100vh;
     font-family: $MerriweatherSans;
     @extend %font-helpers;
     background-color: $white;

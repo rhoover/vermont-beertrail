@@ -6,8 +6,7 @@
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
-    "skycons": "*",
-    "angular-ui-router": "~0.2.10"
+    "skycons": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
