@@ -14,7 +14,6 @@ angular
 
         $timeout(function () {
             $scope.isHome = function (route) {
-                console.log($location.path());
                 return route === $location.path();
             };
         }, 2000);

@@ -1,6 +1,6 @@
 html {
     @extend %responsive-trigger;
-    height: 100vh;
+    min-height: 100vh;
 }
 html.small {
     background: url('/images/phone-home-bg.jpg') no-repeat fixed left top;
@@ -9,7 +9,7 @@ html.small {
 
 .body {
     @include container;
-    height: 100vh;
+    min-height: 100vh;
     font-family: $MerriweatherSans;
     @extend %font-helpers;
     background-color: $white;
