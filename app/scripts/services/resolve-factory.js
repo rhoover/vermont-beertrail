@@ -14,17 +14,31 @@ angular
 
         return {
 
+            // brewerResolve: function () {
+            //     var checkingBrewers = storageFactory.getData('brewer-list-cache');
+            //     if (checkingBrewers !== null) {
+            //         return;
+            //     } else {
+            //         brewerFactory.getBrewerData()
+            //             .success(function (data) {
+
+            //                 storageFactory.storeData('brewer-list-cache', data);
+
+            //         });
+            //     }
+            // },
             brewerResolve: function () {
-                var checkingBrewers = storageFactory.getData('brewer-list-cache');
-                if (checkingBrewers !== null) {
+                // var checkingBrewers = storageFactory.getData('brewer-list-cache');
+                if ( storageFactory.getData('brewer-list-cache') !== null) {
                     return;
                 } else {
-                    brewerFactory.getBrewerData()
-                        .success(function (data) {
-
-                            storageFactory.storeData('brewer-list-cache', data);
-
-                    });
+                    var brewerDataReturn = brewerFactory.getBrewerData()
+                        .then(function (data) {
+                            storageFactory.storeData('brewer-list-cache', data)
+                        }, function () {
+                            alert('Looks like someone mis-poured a beer, and now we are all paying the price.')
+                        });
+                        return brewerDataReturn;
                 }
             },
 
