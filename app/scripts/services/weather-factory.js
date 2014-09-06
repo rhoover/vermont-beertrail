@@ -14,15 +14,11 @@ angular
 
         return {
             weatherReturnedInfo: function (lat, lon) {
-
-                var weatherUrl = 'https://api.forecast.io/forecast/' + weatherKey + '/' + lat + ',' + lon + '?callback=JSON_CALLBACK';
-
-                return $http.jsonp(weatherUrl, {cache:false})
-                    .success(function (data) {
-                        return data;
+                return $http.jsonp('https://api.forecast.io/forecast/' + weatherKey + '/' + lat + ',' + lon + '?callback=JSON_CALLBACK')
+                    .then(function (result) {
+                        return result.data;
                     });
-
             }
-        };
+        }; //end return
 
     });

@@ -23,12 +23,6 @@ angular
         var weather = function (resolveFactory) {
             return resolveFactory.weatherResolve();
         };
-        // var shopping = function (resolveFactory) {
-        //     return resolveFactory.shoppingResolve();
-        // };
-        // var dining = function (resolveFactory) {
-        //     return resolveFactory.diningResolve();
-        // };
 
         $routeProvider
             .when('/', {
