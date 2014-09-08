@@ -1,5 +1,5 @@
 .intro {
-    padding-top: rhythm(4, 16px);
+    padding-top: rhythm(2, 16px);
         @include susy-breakpoint($bp-large, $columns-large) {
             padding-top: rhythm(1, 16px);
         }
