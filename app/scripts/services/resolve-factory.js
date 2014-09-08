@@ -46,12 +46,34 @@ angular
                 } else {
                     var singleBrewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $route.current.params.selector);
                     var weatherDataOneReturn = weatherFactory.weatherReturnedInfo(singleBrewer.latitude, singleBrewer.longitude)
-                    .then(function (data) {
+                    .then(function success(data) {
                         storageFactory.storeData($route.current.params.selector + '-' + 'weather-cache', data);
                     });
                     return weatherDataOneReturn;
                 }
-            } //end weatherResolve
+            }, //end weatherResolve
+
+            diningResolve: function () {
+                if (storageFactory.getData('brewer-list-cache') === null) {
+                    var diningDataReturn = brewerFactory.getBrewerData()
+                    .then(function success(data) {
+                        storageFactory.storeData('brewer-list-cache', data);
+                        var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
+                        return diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude);
+                    })
+                    .then(function success(data) {
+                        storageFactory.storeData($route.current.params.selector + '-' + 'dining-cache', data);
+                    });
+                    return diningDataReturn;
+                } else {
+                    var singleBrewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $route.current.params.selector);
+                    var diningDataOneReturn = diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude)
+                    .then(function success(data) {
+                        storageFactory.storeData($route.current.params.selector + '-' + 'dining-cache', data);
+                    });
+                    return diningDataOneReturn;
+                }
+            }
 
 
         }; //end return

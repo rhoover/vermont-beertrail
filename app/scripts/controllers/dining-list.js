@@ -10,12 +10,8 @@
 
 angular
     .module('vtbtApp')
-    .controller('ListDiningCtrl', function ($scope, $routeParams, storageFactory, appDataFilter, diningFactory) {
+    .controller('ListDiningCtrl', function ($scope, $routeParams, storageFactory, appDataFilter) {
 
-        $scope.brewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
+        $scope.diningList = appDataFilter.businessList(storageFactory.getData($routeParams.selector + '-' + 'dining-cache').businesses);
 
-        diningFactory.yelpDiningInfo($scope.brewer.latitude, $scope.brewer.longitude)
-            .success(function (data) {
-                $scope.diningList = appDataFilter.businessList(data.businesses);
-            });
     });

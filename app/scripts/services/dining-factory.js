@@ -11,17 +11,13 @@
 angular
     .module('vtbtApp')
     .factory('diningFactory', function ($http, $route, yelpKey, storageFactory) {
+
         return {
             yelpDiningInfo: function (lat, lon) {
-
-                var yelpDiningUrl = 'https://api.yelp.com/business_review_search?' + 'limit=20' + '&category=restaurants' + '&lat=' + lat + '&long=' + lon + '&ywsid=' + yelpKey + '&callback=JSON_CALLBACK';
-
-                return $http.jsonp(yelpDiningUrl, {cache:true})
-                    .success(function (diningData) {
-                        storageFactory.storeData($route.current.params.selector + '-' + 'dining-cache', diningData);
-                        return diningData;
-                    });
-
-            } //end yelpDiningInfo
-        };
+                return $http.jsonp('https://api.yelp.com/business_review_search?' + 'limit=20' + '&category=restaurants' + '&lat=' + lat + '&long=' + lon + '&ywsid=' + yelpKey + '&callback=JSON_CALLBACK')
+                .then(function (result) {
+                    return result.data;
+                });
+            }
+        }; //end return
     });

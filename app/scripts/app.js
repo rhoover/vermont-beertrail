@@ -23,6 +23,9 @@ angular
         var weather = function (resolveFactory) {
             return resolveFactory.weatherResolve();
         };
+        var dining = function (resolveFactory) {
+            return resolveFactory.diningResolve();
+        };
 
         $routeProvider
             .when('/', {
@@ -71,7 +74,8 @@ angular
                 templateUrl: 'views/dining-list.html',
                 controller: 'ListDiningCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    // brewerResolve: brewers
+                    diningResolve: dining
                 }
             })
             .when('/:selector/dininglist/:id', {
