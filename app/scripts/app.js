@@ -201,8 +201,9 @@ angular
 
     // This is the key to view transition happiness! i.e scroll to top when view changes
     //Courtesy of: http://codepen.io/mike360/pen/kGsvK
-    .run(function ($rootScope, $timeout, $window) {
+    .run(function ($rootScope, $timeout, $window, $location) {
         $rootScope.$on('$routeChangeSuccess', function () {
+            ga('send', 'pageview', $location.path());
             $timeout(function () {
                 $window.scrollTo(0,0);
             }, 500);
