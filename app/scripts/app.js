@@ -26,6 +26,9 @@ angular
         var dining = function (resolveFactory) {
             return resolveFactory.diningResolve();
         };
+        var shopping = function (resolveFactory) {
+            return resolveFactory.shoppingResolve();
+        };
 
         $routeProvider
             .when('/', {
@@ -74,7 +77,6 @@ angular
                 templateUrl: 'views/dining-list.html',
                 controller: 'ListDiningCtrl',
                 resolve: {
-                    // brewerResolve: brewers
                     diningResolve: dining
                 }
             })
@@ -89,7 +91,8 @@ angular
                 templateUrl: 'views/shopping-list.html',
                 controller: 'ListShoppingCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    // brewerResolve: brewers
+                    shoppingResolve: shopping
                 }
             })
             .when('/:selector/shoppinglist/:id', {

@@ -10,7 +10,7 @@
 
 angular
     .module('vtbtApp')
-    .factory('diningFactory', function ($http, $route, yelpKey, storageFactory) {
+    .factory('diningFactory', function ($http, $route, yelpKey) {
 
         return {
             yelpDiningInfo: function (lat, lon) {

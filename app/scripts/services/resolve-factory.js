@@ -26,7 +26,7 @@ angular
                         });
                         return brewerDataReturn;
                 }
-            },
+            }, //end brewerResolve
 
             weatherResolve: function() {
                 if (storageFactory.getData('brewer-list-cache') === null) {
@@ -73,7 +73,29 @@ angular
                     });
                     return diningDataOneReturn;
                 }
-            }
+            }, //end diningResolve
+
+            shoppingResolve: function () {
+                if (storageFactory.getData('brewer-list-cache') === null) {
+                    var shoppingDataReturn = brewerFactory.getBrewerData()
+                    .then(function success(data) {
+                        storageFactory.storeData('brewer-list-cache', data);
+                        var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
+                        return shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude);
+                    })
+                    .then(function success(data) {
+                        storageFactory.storeData($route.current.params.selector + '-' + 'shopping-cache', data);
+                    });
+                    return shoppingDataReturn;
+                } else {
+                    var singleBrewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $route.current.params.selector);
+                    var shoppingDataOneReturn = shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude)
+                    .then(function success(data) {
+                        storageFactory.storeData($route.current.params.selector + '-' + 'shopping-cache', data);
+                    });
+                    return shoppingDataOneReturn;
+                }
+            } //end shoppingResolve
 
 
         }; //end return
