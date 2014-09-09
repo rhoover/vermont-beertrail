@@ -425,9 +425,10 @@ AddDefaultCharset utf-8
 # `FileETag None` is not enough for every server.
 <IfModule mod_headers.c>
     Header unset ETag
+    FileETag None
 </IfModule>
 
-FileETag None
+#FileETag None
 
 # ------------------------------------------------------------------------------
 # | Expires headers (for better cache control)                                 |
@@ -439,7 +440,7 @@ FileETag None
 
 <IfModule mod_expires.c>
 
-    ExpiresActive on
+    ExpiresActive On
     ExpiresDefault                                      "access plus 1 month"
 
   # CSS

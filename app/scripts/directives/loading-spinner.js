@@ -14,13 +14,15 @@ angular.module('vtbtApp')
             link: function link(scope, element, attrs) {
 
                 loadingSpinner.subscribeOnStart(function () {
-                    element.addClass('spinner-progress');
+                    element.addClass('spinner-block-progress');
+                    element.children(1).addClass('spinner-progress');
                 });
 
                 loadingSpinner.subscribeOnEnd(function () {
                     if (loadingSpinner.getRequestCount() ===0) {
-                        element.removeClass('spinner-progress');
-                    };
+                        element.removeClass('spinner-block-progress');
+                        element.children(1).removeClass('spinner-progress');
+                    }
                 });
             }
         };

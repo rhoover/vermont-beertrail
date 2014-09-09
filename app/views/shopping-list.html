@@ -1,3 +1,6 @@
+<section class="spinner-block" loading-spinner-widget>
+    <div class="spinner"></div>
+</section>
 <section class="yelp-attribution">
     <a ng-href="http://www.yelp.com" target="_blank" class="yelp-attribution-link">Local Shopping Courtesy of </a>
     <div class="brewer40-yelp"></div>
@@ -5,7 +8,6 @@
 <section class="search">
     <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
 </section>
-<section class="spinner" loading-spinner-widget></section>
 <a ng-href="#!/{{brewer.selector}}/shoppinglist/{{shopping.id}}" class="yelp-list-item" ng-repeat="shopping in shoppingList | filter:search:strict  track by $index">
     <img ng-src="{{shopping.photo_url_small}}" class="yelp-list-item-image" />
     <p class="yelp-list-item-details">{{shopping.name}}</p>

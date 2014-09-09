@@ -5,6 +5,7 @@
     @include translateZ(50);
     // z-index: 50;
     @include background-image(linear-gradient($green, lighten($green-dark, 3%) ));
+    background-color: $green-dark;
     border-bottom: .1em solid $black;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 wide of 18 no-gutters);

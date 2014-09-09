@@ -200,6 +200,7 @@ angular
     }) //end universal loading spinner config block
 
     // This is the key to view transition happiness! i.e scroll to top when view changes
+    //Also Google Analytics
     //Courtesy of: http://codepen.io/mike360/pen/kGsvK
     .run(function ($rootScope, $timeout, $window, $location) {
         $rootScope.$on('$routeChangeSuccess', function () {
