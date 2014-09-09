@@ -14,7 +14,7 @@ angular
 
         return {
             weatherReturnedInfo: function (lat, lon) {
-                return $http.jsonp('https://api.forecast.io/forecast/' + weatherKey + '/' + lat + ',' + lon + '?callback=JSON_CALLBACK')
+                return $http.jsonp('https://api.forecast.io/forecast/' + weatherKey + '/' + lat + ',' + lon + '?callback=JSON_CALLBACK', {cache: false})
                     .then(function (result) {
                         return result.data;
                     });

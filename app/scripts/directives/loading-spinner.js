@@ -11,7 +11,7 @@ angular.module('vtbtApp')
     .directive('loadingSpinnerWidget', function (loadingSpinner) {
         return {
             restrict: 'A',
-            link: function link(scope, element, attrs) {
+            link: function link(scope, element) {
 
                 loadingSpinner.subscribeOnStart(function () {
                     element.addClass('spinner-block-progress');

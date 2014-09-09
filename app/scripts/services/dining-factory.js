@@ -14,7 +14,7 @@ angular
 
         return {
             yelpDiningInfo: function (lat, lon) {
-                return $http.jsonp('https://api.yelp.com/business_review_search?' + 'limit=20' + '&category=restaurants' + '&lat=' + lat + '&long=' + lon + '&ywsid=' + yelpKey + '&callback=JSON_CALLBACK')
+                return $http.jsonp('https://api.yelp.com/business_review_search?' + 'limit=20' + '&category=restaurants' + '&lat=' + lat + '&long=' + lon + '&ywsid=' + yelpKey + '&callback=JSON_CALLBACK', {cache: false})
                 .then(function (result) {
                     return result.data;
                 });

@@ -14,7 +14,7 @@ angular
 
         return {
             getBrewerData: function () {
-                return $http.get('data/vtbrewers.json')
+                return $http.get('data/vtbrewers.json', {cache: false})
                     .then(function (result) {
                         return result.data;
                     });

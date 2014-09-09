@@ -16,6 +16,6 @@ angular
             $scope.isHome = function (route) {
                 return route === $location.path();
             };
-        }, 2000);
+        }, 500);
 
     });

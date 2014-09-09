@@ -46,8 +46,8 @@
             padding: rhythm(.5, 16px) gutter(6);
             @include type-scale(small);
             text-decoration: none;
-            color: $white;
-            text-shadow: 0px 0px 2px $black;
+            color: darken($black, 20%);
+            text-shadow: 0px 0px 1px rgba($white, .5);
             &-left {
                 @extend %intro-links;
                 border-right: .1em solid $green-dark;

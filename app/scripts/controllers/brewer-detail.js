@@ -10,7 +10,7 @@
 
 angular
     .module('vtbtApp')
-    .controller('BrewerDetailCtrl', function ($scope, $routeParams, $location, storageFactory, appDataFilter) {
+    .controller('BrewerDetailCtrl', function ($scope, $routeParams, storageFactory, appDataFilter) {
 
         $scope.brewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
 

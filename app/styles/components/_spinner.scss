@@ -8,7 +8,7 @@
     width: 100%;
     min-height: 100vh;
     @include translateZ(15);
-    background: rgba($white, .90);
+    background: rgba($grey-blue, .60);
   }
 }
 
@@ -19,12 +19,12 @@
     display: block;
     width: rhythm(5, 16px);
     height: rhythm(5, 16px);
-    margin: rhythm(4, 16px) auto;
+    margin: rhythm(8, 16px) auto;
     -webkit-animation: rotation .95s infinite linear;
     -moz-animation: rotation .95s infinite linear;
     -o-animation: rotation .95s infinite linear;
     animation: rotation .95s infinite linear;
-    border-top: .1em solid $grey-blue;
+    border-top: .3em solid $green-darker;
     border-radius: 100%;
   }
 }

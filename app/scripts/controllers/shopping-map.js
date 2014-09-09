@@ -16,5 +16,4 @@ angular
         var findTheBusiness = appDataFilter.business(shoppingListData.businesses, $routeParams.id);
         $scope.shopping = findTheBusiness;
 
-        // analyticsGoogle.logPageLoad($scope, $location.absUrl(), $location.path());
     });

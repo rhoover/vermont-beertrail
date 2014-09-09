@@ -9,7 +9,7 @@
  */
 
 angular.module('vtbtApp')
-    .controller('BrewerStatewideMapCtrl', function ($scope, $location, storageFactory) {
+    .controller('BrewerStatewideMapCtrl', function ($scope, storageFactory) {
 
         $scope.brewers = storageFactory.getData('brewer-list-cache');
 
