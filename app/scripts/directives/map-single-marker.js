@@ -20,18 +20,24 @@ angular
             },
             link: function (scope, element, attrs) {
 
-                scope.initialize = function () {
+                //note this is an abstraction on top of standard GoogleMaps initialization stuff, so we don't repeat ourselves
+                var myMapOptions, map, marker, circle, dynamicCircle;
+                var div = element[0];
 
-                    //note this is an abstraction on top of standard GoogleMaps initialization stuff, so we don't repeat ourselves
-                    var myMapOptions, map, marker;
-                    var div = element[0];
+                scope.initialize = function () {
 
                     myMapOptions = googleMapStuff.mapOptions(10, attrs.lat, attrs.lon);
 
                     map = googleMapStuff.mapCreator(div, myMapOptions);
 
                     marker = googleMapStuff.mapMarker(map, attrs.lat, attrs.lon);
+
+                    circle = googleMapStuff.gpsCircle(map, attrs.lat, attrs.lon);
+
+                    dynamicCircle = googleMapStuff.dynamicCircle(map, circle);
+
                 };
+
 
                 loadGoogleMapAPI.then(function () {
                     //promise succeeded

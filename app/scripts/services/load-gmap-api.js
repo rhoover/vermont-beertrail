@@ -18,7 +18,7 @@ angular
 
         function loadScript() {
             var scriptTag = document.createElement('script');
-            scriptTag.src = '//maps.googleapis.com/maps/api/js?sensor=false&language=en&callback=initMap';
+            scriptTag.src = '//maps.googleapis.com/maps/api/js?true=false&language=en&callback=initMap';
             angular.element(document.body).append(scriptTag);
         }
 
