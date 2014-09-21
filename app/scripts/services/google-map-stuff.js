@@ -38,10 +38,10 @@ angular
                     map: map
                 });
             },
-            gpsCircle: function (map, lat, lon) {
+            gpsCircle: function (map, lati, loni) {
                 var gpsCircle = new google.maps.Circle({
                     map:map,
-                    center: new google.maps.LatLng(lat, lon),
+                    center: new google.maps.LatLng(lati, loni),
                     radius: 1000,
                     fillColor: '#00BFFF',
                     fillOpacity: .45,
@@ -53,7 +53,6 @@ angular
             dynamicCircle: function (map, circle) {
                 return google.maps.event.addListener(map, 'zoom_changed', function () {
                     var zoomLevel = map.getZoom();
-                    console.log(zoomLevel);
                     switch(true) {
                         case (zoomLevel <= 9):
                             circle.setRadius(2000);

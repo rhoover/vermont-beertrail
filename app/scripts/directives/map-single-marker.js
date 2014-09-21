@@ -23,7 +23,7 @@ angular
             link: function (scope, element, attrs) {
 
                 //note this is an abstraction on top of standard GoogleMaps initialization stuff, so we don't repeat ourselves
-                var myMapOptions, map, marker, circle, dynamicCircle, perLoc;
+                var myMapOptions, map, marker, circle, dynamicCircle;
                 var div = element[0];
 
                 scope.initialize = function () {
@@ -45,6 +45,7 @@ angular
                     //promise succeeded
                     scope.initialize();
                 }, function () {
+
                     //promise failed
                     /* jshint validthis: true */
                     alert('Google maps is clearly not co-operating');
