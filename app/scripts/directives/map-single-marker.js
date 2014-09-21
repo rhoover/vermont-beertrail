@@ -16,12 +16,14 @@ angular
             // scope: true,
             scope: {
                 lat: '@lat',
-                lon: '@lon'
+                lon: '@lon',
+                lati: '@lati',
+                loni: '@loni'
             },
             link: function (scope, element, attrs) {
 
                 //note this is an abstraction on top of standard GoogleMaps initialization stuff, so we don't repeat ourselves
-                var myMapOptions, map, marker, circle, dynamicCircle;
+                var myMapOptions, map, marker, circle, dynamicCircle, perLoc;
                 var div = element[0];
 
                 scope.initialize = function () {
@@ -32,14 +34,14 @@ angular
 
                     marker = googleMapStuff.mapMarker(map, attrs.lat, attrs.lon);
 
-                    circle = googleMapStuff.gpsCircle(map, attrs.lat, attrs.lon);
+                    circle = googleMapStuff.gpsCircle(map, attrs.lati, attrs.loni);
 
                     dynamicCircle = googleMapStuff.dynamicCircle(map, circle);
 
                 };
 
-
                 loadGoogleMapAPI.then(function () {
+
                     //promise succeeded
                     scope.initialize();
                 }, function () {

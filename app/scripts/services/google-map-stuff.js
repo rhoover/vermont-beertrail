@@ -58,63 +58,44 @@ angular
                         case (zoomLevel <= 9):
                             circle.setRadius(2000);
                             break;
-                        case (zoomLevel <= 11):
+                        case (zoomLevel <= 11 && zoomLevel > 10):
                             circle.setRadius(400);
                             break;
-                        case (zoomLevel <= 12):
+                        case (zoomLevel <= 12 && zoomLevel > 11):
                             circle.setRadius(300);
                             break;
-                        case (zoomLevel <= 13):
+                        case (zoomLevel <= 13 && zoomLevel > 12):
                             circle.setRadius(100);
                             break;
-                        case (zoomLevel <= 14):
+                        case (zoomLevel <= 14 && zoomLevel > 13):
                             circle.setRadius(50);
                             break;
-                        case (zoomLevel <= 15):
+                        case (zoomLevel <= 15 && zoomLevel > 14):
                             circle.setRadius(25);
                             break;
-                        case (zoomLevel <= 16):
+                        case (zoomLevel <= 16 && zoomLevel > 15):
                             circle.setRadius(15);
                             break;
-                        case (zoomLevel <= 17):
+                        case (zoomLevel <= 17 && zoomLevel > 16):
                             circle.setRadius(10);
                             break;
-                        case (zoomLevel <= 18):
+                        case (zoomLevel <= 18 && zoomLevel > 17):
                             circle.setRadius(5);
                             break;
                     }
                 });
             },
             infoWindowCreator: function (infoContent) {
-                // var infoWindowStuff;
-                // infoWindowStuff = new google.maps.InfoWindow({
-                //     content: infoContent
-                // });
-                // return infoWindowStuff;
                 return new google.maps.InfoWindow({
                     content: infoContent
                 });
             },
             infoWindowClick: function (map, marker, infowindow) {
-                // var clickEventStuff;
-                // clickEventStuff = google.maps.event.addListener(marker, 'click', function () {
-                //     infowindow.open(map, marker);
-                // });
-                // return clickEventStuff;
                 return google.maps.event.addListener(marker, 'click', function () {
                     infowindow.open(map, marker);
                 });
             },
             infoWindowsClick: function (map, marker, infowindow, infoContent) {
-                // var multipleClickEventStuff;
-                // //Notice closure pattern, necessary for map with multiple markers
-                // multipleClickEventStuff = google.maps.event.addListener(marker, 'click', (function (marker, infoContent) {
-                //         return function () {
-                //             infowindow.setContent(infoContent);
-                //             infowindow.open(map, marker);
-                //         };
-                //     })(marker, infoContent));
-                // return multipleClickEventStuff;
                 return google.maps.event.addListener(marker, 'click', (function (marker, infoContent) {
                         return function () {
                             infowindow.setContent(infoContent);
