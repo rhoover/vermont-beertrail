@@ -33,7 +33,8 @@
         }
         &-image {
             @extend %lists-image;
-            // @include span(2 of 12);
+            width: 60px;
+            height: 60px;
             @include susy-breakpoint($bp-large, $columns-large) {
                 @include span(2 of 24);
                 margin-left: span(3 of 24);

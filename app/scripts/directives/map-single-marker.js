@@ -13,12 +13,13 @@ angular
 
         return {
             restrict: 'A',
-            // scope: true,
             scope: {
+
                 lat: '@lat',
                 lon: '@lon',
                 lati: '@lati',
                 loni: '@loni'
+
             },
             link: function (scope, element, attrs) {
 

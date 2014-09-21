@@ -14,13 +14,10 @@ angular
 
         return {
             storeData: function (key, data) {
-                var storeMe = angular.toJson(data);
-                sessionStorage.setItem(key, storeMe);
+                sessionStorage.setItem(key, angular.toJson(data));
             },
             getData: function(key) {
-                var value = sessionStorage.getItem(key);
-                var parseMe = angular.fromJson(value);
-                return parseMe;
+                return angular.fromJson(sessionStorage.getItem(key));
             }
         };
     });
