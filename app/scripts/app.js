@@ -112,7 +112,7 @@ angular
 
     .provider('loadingSpinner', function () {
         //Inspired by and courtesy of: http://www.kvetis.com/2014/01/angularjs-loading-widget.html
-        //I wish this weren't here, but for reasons that escape me Angular isn't recognizing the provider module as an injectable into a config method
+        //I wish this weren't here, but Angular requires the provider module be instantiated before a config method
 
         var startListening = [];
         var endListening = [];
@@ -167,13 +167,12 @@ angular
 
         // Method for Instantiating Service
         this.$get = function () {
-            var that = this;
             return {
-                subscribeOnStart: that.subscribeOnStart,
-                fireRequestStarted: that.fireRequestStarted,
-                subscribeOnEnd: that.subscribeOnEnd,
-                fireRequestEnded: that.fireRequestEnded,
-                getRequestCount: that.getRequestCount
+                subscribeOnStart: this.subscribeOnStart,
+                fireRequestStarted: this.fireRequestStarted,
+                subscribeOnEnd: this.subscribeOnEnd,
+                fireRequestEnded: this.fireRequestEnded,
+                getRequestCount: this.getRequestCount
             };
         };
     })
