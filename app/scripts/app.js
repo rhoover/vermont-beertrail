@@ -119,7 +119,7 @@ angular
         var count = 0;
 
         // Counter in case of multiple http Requests
-        //TODO move this out into a service/factory
+        //would like to move this out into a factory, but can't
         var requestCounter = {
             increment: function () {
                 count++;

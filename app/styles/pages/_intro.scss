@@ -29,9 +29,9 @@
     &-choose {
         @include span(12 wide of 12 no-gutters);
         margin-top: rhythm(1, 16px);
-        background-color: rgba($green, .25);
+        background-color: rgba($green, .35);
         border-radius: .25em;
-        border: .1em solid $green-dark;
+        border: .1em solid $black;
         @include susy-breakpoint($bp-medium, $columns-medium) {
             @include span(14 wide of 18 no-gutters);
             margin-left: span(2 of 18);
@@ -46,11 +46,11 @@
             padding: rhythm(.5, 16px) gutter(6);
             @include type-scale(small);
             text-decoration: none;
-            color: darken($black, 20%);
-            text-shadow: 0px 0px 1px rgba($white, .5);
+            color: $white;
+            text-shadow: 0px 0px 1px rgba($black, .5);
             &-left {
                 @extend %intro-links;
-                border-right: .1em solid $green-dark;
+                border-right: .1em solid $black;
                 @include susy-breakpoint($bp-medium, $columns-medium) {
                     @include type-scale(base);
                 }
@@ -60,6 +60,10 @@
                 @include susy-breakpoint($bp-medium, $columns-medium) {
                     @include type-scale(base);
                 }
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                text-shadow: 0px 0px 1px rgba($white, .5);
+                color: $black;
             }
         }
     }
@@ -112,6 +116,5 @@
 }
 
 .choosehome {
-    background-color: $green;
-        border: .1em solid $black;
+    border: .1em solid $black;
 }

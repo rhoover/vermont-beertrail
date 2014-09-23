@@ -255,6 +255,16 @@ AddDefaultCharset utf-8
    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
+#Option 3: rewrite requests from indexing bots
+#So that  http://www.vtbeertrail/?_escaped_fragment_=/blah-blah
+#gets directed to pre-rendered pages within www.vtbeertrail.com/snapshots
+
+
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{REQUEST_URI}  ^/$
+#     RewriteCond %{QUERY_STRING}  ^_escaped_fragment_=/?(.*)$
+#     RewriteRule ^(.*)$ /snapshots/%1? [NC, L]
+# </IfModule>
 
 # ##############################################################################
 # # SECURITY                                                                   #
