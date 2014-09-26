@@ -26,7 +26,7 @@
             padding-left: span(3 of 18);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
-          min-height: rhythm(6, 16px);
+          min-height: rhythm(7, 16px);
           padding-left: 0;
           &:hover {
             background-color: rgba($grey-blue, .25);
