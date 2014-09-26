@@ -39,7 +39,9 @@ text-rendering: optimizeLegibility;
         @include span(18 wide of 18 no-gutters);
     }
     @include susy-breakpoint($bp-large, $columns-large) {
-        @include span(24 wide of 24 no-gutters);
+        // @include span(24 wide of 24 no-gutters);
+        // @include gallery(6 of 24);
+        @include span(8 of 24 no-gutters);
     }
     &:focus {
         background-color: rgba($green-dark, .5);

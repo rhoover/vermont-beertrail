@@ -6,7 +6,7 @@
             @include bleed-x($bleed);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
-            $bleed: span(10)+gutter(2.3);
+            $bleed: span(10)+gutter(1.7);
             @include bleed-x($bleed);
             text-align: left;
         }
