@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc directive
- * @name vtbtApp.directive:weatherskycons
+ * @name vtbtApp.directive:weatherSkycons
  * @description
  * # weatherskycons
  */
 
 angular
     .module('vtbtApp')
-    .directive('weatherSkycons', function ($timeout, skyconConvert) {
+    .directive('weatherSkycons', function (skyconConvert) {
 
         return {
             restrict: 'E',
@@ -18,19 +18,10 @@ angular
             replace: true,
 
             link: function (scope, element, attrs) {
-                var canvasElement = element[0];
-                var skyconConfig = {
-                    color: 'grey',
-                    resizeClear: true
-                };
 
-                // $timeout(function () {
-                    var skyconInfo = attrs.skycon;
-                    var skyconSyntax = skyconConvert.skyconIcon(skyconInfo);
-                    var skycons = new Skycons(skyconConfig);
-                    skycons.set(canvasElement, skyconSyntax);
-                    skycons.play();
-                // }, 4000);
+                var skycons = new Skycons({color:'grey', resizeClear:true});
+                skycons.set(element[0], skyconConvert.skyconIcon(attrs.skycon));
+                skycons.play();
 
             } //end link
         }; //end return
