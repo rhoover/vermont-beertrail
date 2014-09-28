@@ -51,19 +51,14 @@
             &-left {
                 @extend %intro-links;
                 border-right: .1em solid $black;
-                @include susy-breakpoint($bp-medium, $columns-medium) {
-                    @include type-scale(base);
-                }
             }
             &-right {
                 @extend %intro-links;
-                @include susy-breakpoint($bp-medium, $columns-medium) {
-                    @include type-scale(base);
-                }
             }
-            @include susy-breakpoint($bp-large, $columns-large) {
-                text-shadow: 0px 0px 1px rgba($white, .5);
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                @include type-scale(base);
                 color: $black;
+                text-shadow: 0px 0px 1px rgba($white, .5);
             }
         }
     }
@@ -71,9 +66,6 @@
 
 .caveat {
     display: none;
-    @include susy-breakpoint($bp-medium, $columns-medium) {
-        display: none;
-    }
     @include susy-breakpoint($bp-large, $columns-large) {
         display: block;
         @include span(24 wide of 24 no-gutters);
@@ -95,21 +87,12 @@
         color: $black;
         text-shadow: 0px 0px 0px $black;
     }
-    @include susy-breakpoint($bp-large, $columns-large) {
-        @include type-weight(regular);
-        color: $black;
-        text-shadow: 0px 0px 0px $black;
-    }
 }
 
 .texthome {
     color: $white;
     text-shadow: 0px 0px 2px $black;
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        color: $black;
-        text-shadow: 0px 0px 1px transparent;
-    }
-    @include susy-breakpoint($bp-large, $columns-large) {
         color: $black;
         text-shadow: 0px 0px 1px transparent;
     }

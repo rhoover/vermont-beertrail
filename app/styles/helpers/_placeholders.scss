@@ -39,8 +39,6 @@ text-rendering: optimizeLegibility;
         @include span(18 wide of 18 no-gutters);
     }
     @include susy-breakpoint($bp-large, $columns-large) {
-        // @include span(24 wide of 24 no-gutters);
-        // @include gallery(6 of 24);
         @include span(8 of 24 no-gutters);
     }
     &:focus {
@@ -49,21 +47,21 @@ text-rendering: optimizeLegibility;
     &:active {
         background-color: rgba($green-dark, .5);
     }
-}
-%lists-detail {
+    &-detail {
     @include span(last 9 of 12);
     @include type-scale(base);
     color: $black;
-}
-%lists-detail-small {
-    @include span(last 9 of 12);
-    @include type-scale(tiny);
-    color: $black;
-}
-%lists-image {
-    @include span(3 of 12);
-    height: 40px;
-    margin-right: 0;
+        &-small {
+            @include span(last 9 of 12);
+            @include type-scale(tiny);
+            color: $black;
+        }
+    }
+    &-image {
+        @include span(3 of 12);
+        height: 40px;
+        margin-right: 0;
+    }
 }
 
 %attribution {
@@ -84,11 +82,10 @@ text-rendering: optimizeLegibility;
 %inside-view {
     $bleed: span(1)+gutter(12);
     @include bleed-x($bleed);
-}
-
-%inside-view-medium {
-    $bleed: span(3)+gutter(13);
-    @include bleed-x($bleed);
+    &-medium {
+        $bleed: span(3)+gutter(13);
+        @include bleed-x($bleed);
+    }
 }
 
 %responsive-trigger {

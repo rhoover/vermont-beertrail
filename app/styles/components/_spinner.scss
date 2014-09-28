@@ -13,38 +13,19 @@
 }
 
 .spinner {
-  // display: none;
   &-progress {
     clear: both;
     display: block;
     width: rhythm(5, 16px);
     height: rhythm(5, 16px);
     margin: rhythm(8, 16px) auto;
-    -webkit-animation: rotation .95s infinite linear;
-    -moz-animation: rotation .95s infinite linear;
-    -o-animation: rotation .95s infinite linear;
-    animation: rotation .95s infinite linear;
-    border-top: .3em solid $green-darker;
+    @include animation(rotation .95s infinite linear);
+    border-top: .2em solid $green-darker;
     border-radius: 100%;
   }
 }
 
-@-webkit-keyframes rotation {
-from {-webkit-transform: rotate(0deg);}
-to {-webkit-transform: rotate(359deg);}
-}
-
-@-moz-keyframes rotation {
-from {-moz-transform: rotate(0deg);}
-to {-moz-transform: rotate(359deg);}
-}
-
-@-o-keyframes rotation {
-from {-o-transform: rotate(0deg);}
-to {-o-transform: rotate(359deg);}
-}
-
-@keyframes rotation {
-from {transform: rotate(0deg);}
-to {transform: rotate(359deg);}
+@include keyframes(rotation) {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
 }

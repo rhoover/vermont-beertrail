@@ -1,24 +1,3 @@
-.search {
-    border-bottom: none;
-    &-input {
-        @include span(12 wide of 12 no-gutters);
-        margin: 0;
-        padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) span(1);
-        @include type-scale(medium);
-        background: transparent;
-        border-top: transparent;
-        border-style: solid;
-        border-color: rgba($grey-blue, .5);
-        border-width: 0 0 .1em 0;
-        &:focus {
-            @include box-shadow(rgba($grey, 0.25) 0 .25em .25em 0);
-            border-width: 0 0 .3em 0;
-        }
-        @include susy-breakpoint($bp-large, $columns-large) {
-            margin-bottom: rhythm(1, 16px);
-        }
-    }
-}
 .brewer-list {
     @extend %lists;
     @include susy-breakpoint($bp-medium, $columns-medium) {
