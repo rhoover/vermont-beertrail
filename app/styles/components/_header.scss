@@ -3,7 +3,6 @@
     top: 0px;
     @include span(12 wide of 12 no-gutters); //aka width-100%, no margins
     @include translateZ(50);
-    // z-index: 50;
     @include background-image(linear-gradient($green, lighten($green-dark, 3%) ));
     background-color: $green-dark;
     border-bottom: .1em solid $black;
@@ -13,11 +12,13 @@
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(24 wide of 24 no-gutters);
     }
+
     &-back-button {
         @extend %nav-buttons;
         @include icon('before', true, 'back');
         cursor: pointer;
     }
+
     &-heading {
         @include span(8 of 12);
         @include type-scale(large);
@@ -26,6 +27,7 @@
         color: $white;
         text-align: center;
     }
+
     &-home-button {
         @extend %nav-buttons;
         @include icon('before', true, 'home');

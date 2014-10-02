@@ -47,16 +47,18 @@ text-rendering: optimizeLegibility;
     &:active {
         background-color: rgba($green-dark, .5);
     }
+
     &-detail {
-    @include span(last 9 of 12);
-    @include type-scale(base);
-    color: $black;
+        @include span(last 9 of 12);
+        @include type-scale(base);
+        color: $black;
         &-small {
             @include span(last 9 of 12);
             @include type-scale(tiny);
             color: $black;
         }
     }
+
     &-image {
         @include span(3 of 12);
         height: 40px;
@@ -65,23 +67,24 @@ text-rendering: optimizeLegibility;
 }
 
 %attribution {
-        $bleed: span(1)+gutter(13);
-        @include bleed-x($bleed);
-        margin-top: rhythm(-.33, 16px);
-        text-align: center;
-        padding: rhythm(.5, 16px);
-        background-color: $attribution;
-        border-bottom: .1em solid rgba($grey-blue, .5);
-        a {
-            @include type-scale(small);
-            text-decoration: none;
-            color: $black;
-        }
+    $bleed: span(1)+gutter(13);
+    @include bleed-x($bleed);
+    margin-top: rhythm(-.33, 16px);
+    text-align: center;
+    padding: rhythm(.5, 16px);
+    background-color: $attribution;
+    border-bottom: .1em solid rgba($grey-blue, .5);
+    a {
+        @include type-scale(small);
+        text-decoration: none;
+        color: $black;
     }
+}
 
 %inside-view {
     $bleed: span(1)+gutter(12);
     @include bleed-x($bleed);
+
     &-medium {
         $bleed: span(3)+gutter(13);
         @include bleed-x($bleed);
