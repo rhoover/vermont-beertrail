@@ -1,7 +1,7 @@
 .view {
     @include span(12 wide of 12 no-gutters);
     padding: 0 span(1);
-    margin-top: rhythm(3, 16px);
+    margin-top: rhythm(2.7, 16px);
     @include translateZ(5);
     @include susy-breakpoint($bp-medium, $columns-medium) {
         padding: 0 span(4 of 18);

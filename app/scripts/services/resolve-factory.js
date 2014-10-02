@@ -32,23 +32,23 @@ angular
                 if (storageFactory.getData(brewerCacheKey) === null) {
                     //aka $http.get('/my-first-url')
                     var weatherDataReturn = brewerFactory.getBrewerData()
-                    .then(function success(data) {
-                        storageFactory.storeData(brewerCacheKey, data);
-                        var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
-                        //aka $http.get('/my-second-url')
-                        return weatherFactory.weatherReturnedInfo(singleBrewer.latitude, singleBrewer.longitude);
-                    })
-                    .then(function success(data) {
-                        storageFactory.storeData($route.current.params.selector + '-' + weatherCacheKey, data);
-                    });
+                        .then(function success(data) {
+                            storageFactory.storeData(brewerCacheKey, data);
+                            var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
+                            //aka $http.get('/my-second-url')
+                            return weatherFactory.weatherReturnedInfo(singleBrewer.latitude, singleBrewer.longitude);
+                        })
+                        .then(function success(data) {
+                            storageFactory.storeData($route.current.params.selector + '-' + weatherCacheKey, data);
+                        });
                     return weatherDataReturn;
 
                 } else {
                     var singleBrewer = appDataFilter.brewer(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
                     var weatherDataOneReturn = weatherFactory.weatherReturnedInfo(singleBrewer.latitude, singleBrewer.longitude)
-                    .then(function success(data) {
-                        storageFactory.storeData($route.current.params.selector + '-' + weatherCacheKey, data);
-                    });
+                        .then(function success(data) {
+                            storageFactory.storeData($route.current.params.selector + '-' + weatherCacheKey, data);
+                        });
                     return weatherDataOneReturn;
                 }
             }, //end weatherResolve
@@ -56,21 +56,21 @@ angular
             diningResolve: function () {
                 if (storageFactory.getData(brewerCacheKey) === null) {
                     var diningDataReturn = brewerFactory.getBrewerData()
-                    .then(function success(data) {
-                        storageFactory.storeData(brewerCacheKey, data);
-                        var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
-                        return diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude);
-                    })
-                    .then(function success(data) {
-                        storageFactory.storeData($route.current.params.selector + '-' + diningCacheKey, data);
-                    });
+                        .then(function success(data) {
+                            storageFactory.storeData(brewerCacheKey, data);
+                            var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
+                            return diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude);
+                        })
+                        .then(function success(data) {
+                            storageFactory.storeData($route.current.params.selector + '-' + diningCacheKey, data);
+                        });
                     return diningDataReturn;
                 } else {
                     var singleBrewer = appDataFilter.brewer(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
                     var diningDataOneReturn = diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude)
-                    .then(function success(data) {
-                        storageFactory.storeData($route.current.params.selector + '-' + diningCacheKey, data);
-                    });
+                        .then(function success(data) {
+                            storageFactory.storeData($route.current.params.selector + '-' + diningCacheKey, data);
+                        });
                     return diningDataOneReturn;
                 }
             }, //end diningResolve
@@ -78,21 +78,21 @@ angular
             shoppingResolve: function () {
                 if (storageFactory.getData(brewerCacheKey) === null) {
                     var shoppingDataReturn = brewerFactory.getBrewerData()
-                    .then(function success(data) {
-                        storageFactory.storeData(brewerCacheKey, data);
-                        var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
-                        return shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude);
-                    })
-                    .then(function success(data) {
-                        storageFactory.storeData($route.current.params.selector + '-' + shoppingCacheKey, data);
-                    });
+                        .then(function success(data) {
+                            storageFactory.storeData(brewerCacheKey, data);
+                            var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
+                            return shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude);
+                        })
+                        .then(function success(data) {
+                            storageFactory.storeData($route.current.params.selector + '-' + shoppingCacheKey, data);
+                        });
                     return shoppingDataReturn;
                 } else {
                     var singleBrewer = appDataFilter.brewer(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
                     var shoppingDataOneReturn = shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude)
-                    .then(function success(data) {
-                        storageFactory.storeData($route.current.params.selector + '-' + shoppingCacheKey, data);
-                    });
+                        .then(function success(data) {
+                            storageFactory.storeData($route.current.params.selector + '-' + shoppingCacheKey, data);
+                        });
                     return shoppingDataOneReturn;
                 }
             } //end shoppingResolve
