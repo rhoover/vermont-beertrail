@@ -17,3 +17,14 @@ $red: rgb(95,9,0);
 $black: darken($grey, 25%);
 
 $white: lighten($yellow, 36%);
+
+//Courtesy: http://sassmeister.com/gist/d1b14280c6160f91f295
+@function lighten-new($color, $amount: 0%) {
+    @if $amount == 0 {$amount: 0%;}
+    @return lighten($color, ($amount/100%) * (100% - lightness($color)));
+}
+
+@function darken-new($color, $amount: 0%) {
+    @if $amount == 0 {$amount: 0%;}
+    @return darken($color, ($amount/100%) * (lightness($color)));
+}

@@ -33,7 +33,7 @@ text-rendering: optimizeLegibility;
 %lists {
     @include span(12 wide of 12 no-gutters);
     padding: rhythm(.47, 16px) 0;
-    border-bottom: .1em solid rgba($green, .25);
+    border-bottom: .1em solid lighten-new($green, 30%);
     text-decoration: none;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 wide of 18 no-gutters);
