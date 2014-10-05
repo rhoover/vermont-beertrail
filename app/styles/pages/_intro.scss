@@ -32,7 +32,8 @@
     &-choose {
         @include span(12 wide of 12 no-gutters);
         margin-top: rhythm(1, 16px);
-        background-color: lighten-new($green, 15%);
+        background-color: $green-dark;
+        @include background-image(linear-gradient($green, lighten($green-dark, 3%) ));
         border-radius: .25em;
         border: .1em solid $black;
         @include susy-breakpoint($bp-medium, $columns-medium) {

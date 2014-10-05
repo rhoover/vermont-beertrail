@@ -12,9 +12,9 @@ text-rendering: optimizeLegibility;
     @include adjust-font-size-to(28px);
     text-decoration: none;
     color: $yellow-lite;
-    text-shadow: 0 0 .5em $green-darker;
+    text-shadow: 0 0 1px rgba(black, .8);
     &:active {
-        text-shadow: 0 0 1em $white;
+        text-shadow: 0 0 1px rgba(black, .8), 0 0 1em $white;
     }
 }
 
