@@ -28,9 +28,10 @@ angular.module('vtbtApp')
                     for (var i = 0; i < scope.brewers.length; i++) {
                         marker = googleMapStuff.mapMarker(map, scope.brewers[i].latitude, scope.brewers[i].longitude);
 
-                        infoContent = '<p>'+scope.brewers[i].name+'</p>'+
-                        '<p>'+scope.brewers[i].address+'</p>'+
-                        '<p>'+scope.brewers[i].city+', '+ scope.brewers[i].state+'</p>';
+                        infoContent = '<p class="info-window-text">'+scope.brewers[i].name+'</br>'+
+                        scope.brewers[i].address+'</br>'+
+                        scope.brewers[i].city+'</p>'+
+                        '<a href="#!/'+scope.brewers[i].selector+' ">Go To Listing</a>'
 
                         infowindow = googleMapStuff.infoWindowCreator(infoContent);
 
