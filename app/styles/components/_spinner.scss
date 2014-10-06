@@ -10,7 +10,7 @@
             width: 100%;
             min-height: 100vh;
             @include translateZ(15);
-            background: rgba($grey-blue, .60);
+            background: rgba($grey-blue-lite, .40);
         }
     }
 

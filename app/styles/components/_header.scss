@@ -2,9 +2,9 @@
     position: fixed;
     top: 0px;
     @include span(12 wide of 12 no-gutters); //aka width-100%, no margins
-    @include translateZ(50);
-    @include background-image(linear-gradient($green, lighten($green-dark, 3%) ));
-    background-color: $green-dark;
+    z-index: 50;
+    background-color: $green;
+    @include background-image(linear-gradient($green-light, $green));
     border-bottom: .1em solid $black;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 wide of 18 no-gutters);

@@ -1,8 +1,8 @@
 %font-helpers {
-font-kerning: normal;
-font-synthesis: none;
-text-rendering: optimizeLegibility;
--webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 %nav-buttons {
@@ -12,9 +12,9 @@ text-rendering: optimizeLegibility;
     @include adjust-font-size-to(28px);
     text-decoration: none;
     color: $yellow-lite;
-    text-shadow: 0 0 1px rgba(black, .8);
+    text-shadow: 0 0 1px $black-dark;
     &:active {
-        text-shadow: 0 0 1px rgba(black, .8), 0 0 1em $white;
+        text-shadow: 0 0 1px $black, 0 0 1em $white;
     }
 }
 
@@ -23,17 +23,17 @@ text-rendering: optimizeLegibility;
     margin: 0;
     text-align: center;
     &:focus {
-        background-color: rgba($green, .75);
+        background-color: $green-light;
     }
     &:active {
-        background-color: rgba($green, .75);
+        background-color: $green-light;
     }
 }
 
 %lists {
     @include span(12 wide of 12 no-gutters);
     padding: rhythm(.47, 16px) 0;
-    border-bottom: .1em solid lighten-new($green, 30%);
+    border-bottom: .1em solid $grey-blue;
     text-decoration: none;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 wide of 18 no-gutters);
@@ -42,10 +42,10 @@ text-rendering: optimizeLegibility;
         @include span(8 of 24 no-gutters);
     }
     &:focus {
-        background-color: rgba($green-dark, .5);
+        background-color: $green-light;
     }
     &:active {
-        background-color: rgba($green-dark, .5);
+        background-color: $green-light;
     }
 
     &-detail {
@@ -69,11 +69,10 @@ text-rendering: optimizeLegibility;
 %attribution {
     $bleed: span(1)+gutter(13);
     @include bleed-x($bleed);
-    margin-top: rhythm(-.33, 16px);
     text-align: center;
     padding: rhythm(.5, 16px);
     background-color: $attribution;
-    border-bottom: .1em solid rgba($grey-blue, .5);
+    border-bottom: .1em solid $grey-blue-lite;
     a {
         @include type-scale(small);
         text-decoration: none;

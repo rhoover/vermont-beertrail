@@ -2,7 +2,6 @@
     display: block;
     @extend %inside-view;
     height: rhythm(24, 16px);
-    @include translateZ(25);
     z-index: 25;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         $bleed: span(6)+gutter(3.5);
@@ -10,7 +9,7 @@
         height: 100vh;
     }
     @include susy-breakpoint($bp-large, $columns-large) {
-        $bleed: span(10)+gutter(2.3);
+        $bleed: span(10)+gutter(1.7);
         @include bleed-x($bleed);
     }
     &-header {
@@ -19,13 +18,13 @@
         min-height: rhythm(2.6, 16px);
         border-bottom: .1em solid $green;
         background-color: $attribution;
-        @include translateZ(25);
+        z-index: 25;
         @include susy-breakpoint($bp-medium, $columns-medium) {
             $bleed: span(6)+gutter(3.5);
             @include bleed-x($bleed);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
-            $bleed: span(10)+gutter(2.3);
+            $bleed: span(10)+gutter(1.7);
             @include bleed-x($bleed);
         }
         &-image {

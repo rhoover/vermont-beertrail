@@ -17,8 +17,8 @@
         margin: rhythm(.5, 16px) 0;
         text-align: center;
         color: $black;
-        border-top: .1em solid rgba($green, .3);
-        border-bottom: .1em solid rgba($green, .3);
+        border-top: .05em solid $grey-blue;
+        border-bottom: .05em solid $grey-blue;
         @include susy-breakpoint($bp-large, $columns-large) {
             text-align: left;
         }
