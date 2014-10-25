@@ -1,17 +1,12 @@
 .intro {
-    padding-top: rhythm(2, 16px);
-        @include susy-breakpoint($bp-large, $columns-large) {
-            padding-top: rhythm(1, 16px);
-        }
+    @include lob-owl();
     &-description {
-        padding: rhythm(.5, 16px) 0;
         text-align: center;
         color: $black;
         @include type-scale(base);
         &-header {
             @extend %inside-view;
             @include type-scale(large);
-            margin-bottom: rhythm(.7, 16px);
             text-align: center;
             color: $black;
             border-top: .1em solid $grey-blue-lite;
@@ -22,9 +17,6 @@
                 @include type-scale(large);
                 border-top: .1em solid $grey-blue-lite;
                 border-bottom: .1em solid $grey-blue-lite;
-            }
-            @include susy-breakpoint($bp-large, $columns-large) {
-                margin-bottom: rhythm(.7, 16px);
             }
         }
     }
@@ -73,9 +65,6 @@
         @include type-scale(small);
         text-align: center;
         color: $black;
-        &:first-of-type {
-            padding-top: rhythm(2, 16px);
-        }
     }
 }
 
