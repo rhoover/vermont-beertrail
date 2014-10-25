@@ -16,7 +16,6 @@
     &-back-button {
         @extend %nav-buttons;
         @include icon('before', true, 'back');
-        cursor: pointer;
     }
 
     &-heading {
@@ -31,6 +30,5 @@
     &-home-button {
         @extend %nav-buttons;
         @include icon('before', true, 'home');
-        cursor: pointer;
     }
 }

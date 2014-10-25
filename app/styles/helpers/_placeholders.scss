@@ -8,6 +8,7 @@
 %nav-buttons {
     @include span(2 of 12);
     padding-top: rhythm(.25, 16px);
+    cursor: pointer;
     text-align: center;
     @include adjust-font-size-to(28px);
     text-decoration: none;
