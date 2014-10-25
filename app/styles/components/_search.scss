@@ -1,8 +1,7 @@
 .search {
-    border-bottom: none;
     &-input {
         @include span(12 wide of 12 no-gutters);
-        margin: 0;
+        margin: rhythm(.5, 16px) 0 0;
         padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) span(1);
         @include type-scale(medium);
         background: transparent;
