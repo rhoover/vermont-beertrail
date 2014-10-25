@@ -110,6 +110,12 @@ angular
         // $locationProvider.html5Mode(true);
     })
 
+    .config(function ($compileProvider) {
+        // Courtesy: http://ambikasukla.wordpress.com/2014/10/24/simple-trick-to-speed-up-your-angularjs-app-load-time/
+        // Change to false for production
+        $compileProvider.debugInfoEnabled(false);
+    })
+
     .provider('loadingSpinner', function () {
         //Inspired by and courtesy of: http://www.kvetis.com/2014/01/angularjs-loading-widget.html
         //I wish this weren't here, but Angular requires the provider module be instantiated before a config method
