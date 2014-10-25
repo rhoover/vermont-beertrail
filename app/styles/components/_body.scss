@@ -13,21 +13,8 @@ html.small {
     font-family: $MerriweatherSans;
     @extend %font-helpers;
     background-color: $white;
-    @include susy-breakpoint($bp-medium, $columns-medium) {
-        @include show-grid(18);
-    }
-    @include susy-breakpoint($bp-medium, $columns-medium) {
-        @include show-grid(24);
-    }
-}
-
-.bodyhome {
-    background-color: transparent;
-    @include susy-breakpoint($bp-medium, $columns-medium) {
-        background-color: $white;
-    }
-    @include susy-breakpoint($bp-large, $columns-large) {
-        background-color: $white;
+    &-small-intro {
+        background-color: transparent;
     }
 }
 
