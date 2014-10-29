@@ -10,4 +10,4 @@
 
 angular
     .module('vtbtApp')
-    .constant('yelpKey', 'KLXOkgumxK4bpwI4qEwm_w');
+    .constant('YELPKEY', 'KLXOkgumxK4bpwI4qEwm_w');

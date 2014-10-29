@@ -10,4 +10,4 @@
 
 angular
     .module('vtbtApp')
-    .constant('brewerCacheKey', 'brewer-list-cache');
+    .constant('BREWERCACHEKEY', 'brewer-list-cache');

@@ -9,4 +9,4 @@
  */
 angular
     .module('vtbtApp')
-    .constant('shoppingCacheKey', 'shopping-cache');
+    .constant('SHOPPINGCACHEKEY', 'shopping-cache');

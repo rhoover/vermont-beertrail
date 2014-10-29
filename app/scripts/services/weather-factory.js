@@ -10,11 +10,11 @@
 
 angular
     .module('vtbtApp')
-    .factory('weatherFactory', function ($http, weatherKey) {
+    .factory('weatherFactory', function ($http, WEATHERKEY) {
 
         return {
             weatherReturnedInfo: function (lat, lon) {
-                return $http.jsonp('https://api.forecast.io/forecast/' + weatherKey + '/' + lat + ',' + lon + '?callback=JSON_CALLBACK', {cache: false})
+                return $http.jsonp('https://api.forecast.io/forecast/' + WEATHERKEY + '/' + lat + ',' + lon + '?callback=JSON_CALLBACK', {cache: false})
                     .then(function (result) {
                         return result.data;
                     });

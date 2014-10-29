@@ -63,6 +63,7 @@
     @include susy-breakpoint($bp-large, $columns-large) {
         display: block;
         @include span(24 wide of 24 no-gutters);
+        margin-top: rhythm(1, 16px);
         @include type-scale(small);
         text-align: center;
         color: $black;

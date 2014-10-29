@@ -10,4 +10,4 @@
 
 angular
     .module('vtbtApp')
-    .constant('weatherCacheKey', 'weather-cache');
+    .constant('WEATHERCACHEKEY', 'weather-cache');

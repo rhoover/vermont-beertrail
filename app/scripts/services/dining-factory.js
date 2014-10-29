@@ -10,11 +10,11 @@
 
 angular
     .module('vtbtApp')
-    .factory('diningFactory', function ($http, $route, yelpKey) {
+    .factory('diningFactory', function ($http, $route, YELPKEY) {
 
         return {
             yelpDiningInfo: function (lat, lon) {
-                return $http.jsonp('https://api.yelp.com/business_review_search?' + 'limit=20' + '&category=restaurants' + '&lat=' + lat + '&long=' + lon + '&ywsid=' + yelpKey + '&callback=JSON_CALLBACK', {cache: false})
+                return $http.jsonp('https://api.yelp.com/business_review_search?' + 'limit=20' + '&category=restaurants' + '&lat=' + lat + '&long=' + lon + '&ywsid=' + YELPKEY + '&callback=JSON_CALLBACK', {cache: false})
                 .then(function (result) {
                     return result.data;
                 });
