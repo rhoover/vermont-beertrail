@@ -1,7 +1,9 @@
 .googlemap {
     display: block;
+    margin-top: rhythm(-.01, 16px);
     @extend %inside-view;
     height: rhythm(24, 16px);
+    overflow: visible !important;
     z-index: 25;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         $bleed: span(6)+gutter(3.5);
@@ -14,7 +16,7 @@
     }
     &-header {
         @extend %inside-view;
-        margin-top: rhythm(-.33, 16px);
+        margin-top: rhythm(-1, 16px);
         min-height: rhythm(2.6, 16px);
         border-bottom: .1em solid $green;
         background-color: $attribution;

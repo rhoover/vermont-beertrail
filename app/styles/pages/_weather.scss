@@ -14,7 +14,6 @@
     &-header {
         padding: rhythm(.25, 16px) 0;
         @include type-scale(medium);
-        margin: rhythm(.5, 16px) 0;
         text-align: center;
         color: $black;
         border-top: .05em solid $grey-blue;
@@ -26,17 +25,16 @@
     &-forecast {
         @include span(12 of 12);
         @extend .weather-header;
+        padding-top: 0px;
         border-top: none;
     }
     &-description {
         @include span(last 8 of 12);
         @include type-scale(base);
-        margin-top: rhythm(1, 16px);
         color: $black;
     }
     &-skycons {
         @include span(4 of 12);
-        margin-top: rhythm(1, 16px);
         height: 64px;
         @include susy-breakpoint($bp-medium, $columns-medium) {
             @include span(3 of 18);

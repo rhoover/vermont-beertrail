@@ -1,13 +1,11 @@
-<section>
-    <section class="spinner-block" loading-spinner-widget>
-        <div class="spinner"></div>
-    </section>
-    <img ng-src="images/brewer100/{{brewer.selector}}.png" class="brewerdetail-image" />
-    <h2 class="brewerdetail-header">{{brewer.name}}</h2>
-    <p class="brewerdetail-small">{{brewer.address}}, {{brewer.city}}, {{brewer.state}}</p>
-    <a ng-href="#!/{{brewer.selector}}/location" class="brewerdetail-button icon-map"><p class="brewerdetail-linktext">Locate Brewery</p></a>
-    <a ng-href="tel:{{brewer.phone}}" class="brewerdetail-button icon-phone" telephone-call><p class="brewerdetail-linktext">{{brewer.phone}}</p></a>
-    <a ng-href="#!/{{brewer.selector}}/shoppinglist" class="brewerdetail-button icon-shopping" ><p class="brewerdetail-linktext">Local Shopping</p></a>
-    <a ng-href="#!/{{brewer.selector}}/dininglist" class="brewerdetail-button icon-dining" ><p class="brewerdetail-linktext">Local Dining</p></a>
-    <a ng-href="#!/{{brewer.selector}}/weather" class="brewerdetail-button icon-weather" ><p class="brewerdetail-linktext">Local Weather</p></a>
+<img ng-src="images/brewer100/{{brewer.selector}}.png" class="brewerdetail-image" />
+<h2 class="brewerdetail-header">{{brewer.name}}</h2>
+<p class="brewerdetail-small">{{brewer.address}}, {{brewer.city}}, {{brewer.state}}</p>
+<a ng-href="#!/{{brewer.selector}}/location" class="brewerdetail-button icon-map"><p class="brewerdetail-linktext">Locate Brewery</p></a>
+<a ng-href="tel:{{brewer.phone}}" class="brewerdetail-button icon-phone" telephone-call><p class="brewerdetail-linktext">{{brewer.phone}}</p></a>
+<a ng-href="#!/{{brewer.selector}}/shoppinglist" class="brewerdetail-button icon-shopping" ><p class="brewerdetail-linktext">Local Shopping</p></a>
+<a ng-href="#!/{{brewer.selector}}/dininglist" class="brewerdetail-button icon-dining" ><p class="brewerdetail-linktext">Local Dining</p></a>
+<a ng-href="#!/{{brewer.selector}}/weather" class="brewerdetail-button icon-weather" ><p class="brewerdetail-linktext">Local Weather</p></a>
+<section class="spinner-block" loading-spinner-widget>
+    <div class="spinner"></div>
 </section>

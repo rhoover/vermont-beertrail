@@ -9,11 +9,9 @@
         text-align: center;
         color: $black;
         @include type-scale(medium);
-        margin-top: rhythm(-.25, 16px);
     }
     &-button {
         @include span(12 of 12 no-gutters);
-        margin-bottom: rhythm(1, 16px);
         text-align: center;
         color: $black;
         text-decoration: none;
@@ -56,8 +54,7 @@
     &-small {
         text-align: center;
         @include type-scale(small);
-        margin-top: 0;
-        margin-bottom: rhythm(1.5, 16px);
+        margin-top: 0px;
     }
 }
 

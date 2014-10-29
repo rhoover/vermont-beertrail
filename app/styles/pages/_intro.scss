@@ -1,6 +1,5 @@
 .intro {
     @include lob-owl();
-    margin-top: rhythm(1, 16px);
     &-description {
         text-align: center;
         color: $black;
