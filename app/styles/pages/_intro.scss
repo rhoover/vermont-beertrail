@@ -2,19 +2,23 @@
     @include lob-owl();
     &-description {
         text-align: center;
-        color: $black;
+        color: $white;
         @include type-scale(base);
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                color: $black;
+            }
         &-header {
             @extend %inside-view;
             @include type-scale(large);
             text-align: center;
-            color: $black;
+            color: $white;
             border-top: .1em solid $grey-blue-lite;
             border-bottom: .1em solid $grey-blue-lite;
             @include susy-breakpoint($bp-medium, $columns-medium) {
                 $bleed: span(6)+gutter(4);
                 @include bleed-x($bleed);
                 @include type-scale(large);
+                color: $black;
                 border-top: .1em solid $grey-blue-lite;
                 border-bottom: .1em solid $grey-blue-lite;
             }
@@ -22,7 +26,6 @@
     }
     &-choose {
         @include span(12 wide of 12 no-gutters);
-        margin-top: rhythm(1, 16px);
         background-color: $green;
         @include background-image(linear-gradient($green-light, $green));
         border-radius: .25em;

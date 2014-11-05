@@ -38,9 +38,13 @@
     text-decoration: none;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 wide of 18 no-gutters);
+        padding-left: span(3 of 18);
     }
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(8 of 24 no-gutters);
+        &:hover {
+            background-color: rgba($grey-blue, .25);
+        }
     }
     &:focus {
         background-color: $green-light;

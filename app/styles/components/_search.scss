@@ -1,7 +1,7 @@
 .search {
     &-input {
         @include span(12 wide of 12 no-gutters);
-        padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) span(1);
+        // padding: 0 0 rhythm(.25, 16px) 0;
         @include type-scale(medium);
         background: transparent;
         border-top: transparent;
