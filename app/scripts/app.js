@@ -32,10 +32,7 @@ angular
 
         $routeProvider
             .when('/', {
-                templateUrl: 'views/intro.html',
-                resolve: {
-                    brewerResolve: brewers
-                }
+                templateUrl: 'views/intro.html'
             })
             .when('/brewerlist', {
                 templateUrl: 'views/brewer-list.html',
