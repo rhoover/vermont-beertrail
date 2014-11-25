@@ -260,11 +260,11 @@ AddDefaultCharset utf-8
 #gets directed to pre-rendered pages within www.vtbeertrail.com/snapshots
 
 
-<IfModule mod_rewrite.c>
-    RewriteCond %{REQUEST_URI}  ^/$
-    RewriteCond %{QUERY_STRING}  ^_escaped_fragment_=/?(.*)$
-    RewriteRule ^(.*)$ /snapshots/%1? [NC, L]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{REQUEST_URI}  ^/$
+#     RewriteCond %{QUERY_STRING}  ^_escaped_fragment_=/?(.*)$
+#     RewriteRule ^(.*)$ /snapshots/%1? [NC, L]
+# </IfModule>
 
 # ##############################################################################
 # # SECURITY                                                                   #

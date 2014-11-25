@@ -1,6 +1,6 @@
 <section class="businessmap-header">
-    <!-- <img ng-src="{{shopping.photo_url_small}}" class="googlemap-header-image" /> -->
-    <p class="businessmap-header-text">{{shopping.name}}</p>
-    <p class="businessmap-header-text-small">{{shopping.address1}}, {{shopping.city}}</p>
+    <!-- <img ng-src="{{::shopping.photo_url_small}}" class="googlemap-header-image" /> -->
+    <p class="businessmap-header-text">{{::shopping.name}}</p>
+    <p class="businessmap-header-text-small">{{::shopping.address1}}, {{::shopping.city}}</p>
 </section>
-<section id="businesslocation" class="businessmap" single-marker-map lat={{shopping.latitude}} lon={{shopping.longitude}}></section>
+<section id="businesslocation" class="businessmap" single-marker-map lat={{::shopping.latitude}} lon={{::shopping.longitude}}></section>

@@ -13,5 +13,6 @@ angular
     .controller('ListBrewerCtrl', function ($scope, storageFactory, appDataFilter, BREWERCACHEKEY) {
 
         $scope.brewerList = appDataFilter.brewerList(storageFactory.getData(BREWERCACHEKEY));
+        // $scope.brewerList = appDataFilter.sortList(storageFactory.getData(BREWERCACHEKEY), 'selector');
 
     });

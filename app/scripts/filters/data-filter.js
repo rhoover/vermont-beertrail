@@ -68,6 +68,23 @@ angular
                 });
 
                 return sortedBusinesses;
+            },
+            sortList: function (input, comparator) {
+console.log(comparator);
+                var sortedList= [];
+                sortedList = input.sort(function (a, b) {
+                    if (a.comparator < b.comparator)
+                        {
+                            return -1;
+                        }
+                    if (a.comparator > b.comparator)
+                        {
+                            return 1;
+                        }
+                    return 0;
+                });
+console.log(sortedList);
+                return sortedList;
             }
         }; //end return
     });
