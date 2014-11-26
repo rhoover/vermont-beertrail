@@ -12,28 +12,32 @@
         }
     }
     &-header {
+        margin-top: rhythm(1, 16px);
         padding: rhythm(.25, 16px) 0;
         @include type-scale(medium);
         text-align: center;
         color: $black;
-        border-top: .05em solid $grey-blue;
+        // border-top: .05em solid $grey-blue;
         border-bottom: .05em solid $grey-blue;
         @include susy-breakpoint($bp-large, $columns-large) {
             text-align: left;
         }
     }
     &-forecast {
+        margin-top: rhythm(1, 16px);
         @include span(12 of 12);
         @extend .weather-header;
         padding-top: 0px;
         border-top: none;
     }
     &-description {
+        margin-top: rhythm(.5, 16px);
         @include span(last 8 of 12);
         @include type-scale(base);
         color: $black;
     }
     &-skycons {
+        margin-top: rhythm(.5, 16px);
         @include span(4 of 12);
         height: 64px;
         @include susy-breakpoint($bp-medium, $columns-medium) {

@@ -1,7 +1,7 @@
 .brewer-list-item {
     @extend %lists;
     @include susy-breakpoint($bp-large, $columns-large) {
-        min-height: rhythm(4.5, 16px);
+        min-height: rhythm(5.3, 16px);
         padding-left: span(1 of 24);
     }
     &-image {

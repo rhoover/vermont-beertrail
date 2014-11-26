@@ -16,6 +16,7 @@
     }
     &-button {
         @include span(12 of 12 no-gutters);
+        margin-top: rhythm(1, 16px);
         text-align: center;
         color: $black;
         text-decoration: none;

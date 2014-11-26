@@ -33,7 +33,7 @@
 
 %lists {
     @include span(12 wide of 12 no-gutters);
-    padding-bottom: rhythm(1, 16px);
+    padding: rhythm(1, 16px) 0px;
     border-bottom: .1em solid $grey-blue;
     text-decoration: none;
     @include susy-breakpoint($bp-medium, $columns-medium) {
