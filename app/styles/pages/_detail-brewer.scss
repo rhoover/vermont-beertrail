@@ -2,13 +2,17 @@
     &-image {
         display: block;
         margin: 0 auto;
-        padding-top: rhythm(.5, 16px);
-        padding-bottom: rhythm(.5, 16px);
     }
     &-header {
+        margin-top: rhythm(.25, 16px);
         text-align: center;
         color: $black;
         @include type-scale(medium);
+    }
+    &-small {
+        text-align: center;
+        @include type-scale(small);
+        margin-top: 0px;
     }
     &-button {
         @include span(12 of 12 no-gutters);
@@ -27,7 +31,7 @@
         }
         &:before {
             float: left;
-            padding-left: span(2 of 12);
+            padding-left: span(3 of 12);
             color: $grey-blue;
             @include susy-breakpoint($bp-medium, $columns-medium) {
                 padding-left: span(7 of 18);
@@ -43,18 +47,13 @@
     &-linktext {
         @include type-scale(base);
         text-align: left;
-        padding-left: span(5 of 12);
+        padding-left: span(4.5 of 12);
         @include susy-breakpoint($bp-medium, $columns-medium) {
             padding-left: span(9 of 18);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
             padding-left: span(12 of 24);
         }
-    }
-    &-small {
-        text-align: center;
-        @include type-scale(small);
-        margin-top: 0px;
     }
 }
 

@@ -1,10 +1,12 @@
 <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
+
 <a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in brewerList | filter:search:strict track by $index" class="brewer-list-item">
     <div class=" brewer-list-item-image brewer40-{{brewer.selector}}"></div>
     <p class="brewer-list-item-detail">{{brewer.name}}</p>
     <p class="brewer-list-item-detail brewer-list-item-detail-small">{{brewer.address}}</p>
     <p class="brewer-list-item-detail brewer-list-item-detail-small">{{brewer.city}}, {{brewer.state}}</p>
 </a>
+
 <section class="spinner-block" loading-spinner-widget>
     <div class="spinner"></div>
 </section>

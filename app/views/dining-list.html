@@ -2,7 +2,9 @@
     <a ng-href="http://www.yelp.com" target="_blank" class="yelp-attribution-link">Local Dining Courtesy of </a>
     <div class="brewer40-yelp"></div>
 </section>
+
 <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
+
 <a ng-href="#!/{{brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in diningList | filter:search:strict  track by $index">
     <img ng-src="{{dining.photo_url_small}}" class="yelp-list-item-image" />
     <p class="yelp-list-item-details">{{dining.name}}</p>
@@ -17,6 +19,7 @@
         <span class="rating-small">   -from {{dining.review_count}} Reviews(s)</span>
     </p>
 </a>
+
 <section class="spinner-block" loading-spinner-widget>
     <div class="spinner"></div>
 </section>
