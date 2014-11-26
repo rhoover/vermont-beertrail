@@ -12,89 +12,89 @@
 angular
     .module('vtbtApp', ['ngAnimate', 'ngTouch', 'ngRoute'])
 
-    //routing config block
+    //routing config block with resolves
     .config(function ($routeProvider) {
 
         //Inspired by this tip about resolving data before a route change:
         //http://www.dwmkerr.com/promises-in-angularjs-the-definitive-guide/
-        var brewers = function (resolveFactory) {
-            return resolveFactory.brewerResolve();
+        var brewers = function (resolveBrewers) {
+            return resolveBrewers.brewers();
         };
-        var weather = function (resolveFactory) {
-            return resolveFactory.weatherResolve();
+        var weather = function (resolveWeather) {
+            return resolveWeather.weather();
         };
-        var dining = function (resolveFactory) {
-            return resolveFactory.diningResolve();
+        var dining = function (resolveDining) {
+            return resolveDining.dining();
         };
-        var shopping = function (resolveFactory) {
-            return resolveFactory.shoppingResolve();
+        var shopping = function (resolveShopping) {
+            return resolveShopping.shopping();
         };
 
         $routeProvider
             .when('/', {
-                templateUrl: 'views/intro.html'
+                templateUrl: 'views/home.html'
             })
             .when('/brewerlist', {
                 templateUrl: 'views/brewer-list.html',
                 controller: 'ListBrewerCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    brewers: brewers
                 }
             })
             .when('/brewermap', {
                 templateUrl: 'views/brewer-statewide-map.html',
                 controller: 'BrewerStatewideMapCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    brewers: brewers
                 }
             })
             .when('/:selector', {
                 templateUrl: 'views/brewer-detail.html',
                 controller: 'BrewerDetailCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    brewers: brewers
                 }
             })
             .when('/:selector/location', {
                 templateUrl: 'views/brewer-detail-map.html',
                 controller: 'BrewerMapCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    brewers: brewers
                 }
             })
             .when('/:selector/weather', {
                 templateUrl: 'views/weather.html',
                 controller: 'WeatherCtrl',
                 resolve: {
-                    weatherResolve: weather
+                    weather: weather
                 }
             })
             .when('/:selector/dininglist', {
                 templateUrl: 'views/dining-list.html',
                 controller: 'ListDiningCtrl',
                 resolve: {
-                    diningResolve: dining
+                    dining: dining
                 }
             })
             .when('/:selector/dininglist/:id', {
                 templateUrl: 'views/dining-map.html',
                 controller: 'DiningMapCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    brewers: brewers
                 }
             })
             .when('/:selector/shoppinglist', {
                 templateUrl: 'views/shopping-list.html',
                 controller: 'ListShoppingCtrl',
                 resolve: {
-                    shoppingResolve: shopping
+                    shopping: shopping
                 }
             })
             .when('/:selector/shoppinglist/:id', {
                 templateUrl: 'views/shopping-map.html',
                 controller: 'ShoppingMapCtrl',
                 resolve: {
-                    brewerResolve: brewers
+                    brewers: brewers
                 }
             })
             .otherwise({

@@ -9,12 +9,12 @@
 
 angular
     .module('vtbtApp')
-    .directive('homeDataPrefetch', function ($timeout, resolveFactory) {
+    .directive('homeDataPrefetch', function ($timeout, resolveBrewers) {
         return {
             restrict: 'A',
-            link: function (scope, element, attrs) {
+            link: function () {
                 $timeout(function(){
-                    resolveFactory.brewerResolve();
+                    resolveBrewers.brewers();
                 }, 3000);
             }
         };

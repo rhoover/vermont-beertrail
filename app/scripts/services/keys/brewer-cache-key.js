@@ -2,11 +2,12 @@
 
 /**
  * @ngdoc service
- * @name vtbtApp.shoppingcacheKey
+ * @name vtbtApp.brewerlistKey
  * @description
- * # shoppingcacheKey
+ * # brewerlistKey
  * Constant in the vtbtApp.
  */
+
 angular
     .module('vtbtApp')
-    .constant('SHOPPINGCACHEKEY', 'shopping-cache');
+    .constant('brewerCacheKey', 'brewer-list-cache');

@@ -31,7 +31,7 @@ angular.module('vtbtApp')
                         infoContent = '<p class="info-window-text">'+scope.brewers[i].name+'</br>'+
                         scope.brewers[i].address+'</br>'+
                         scope.brewers[i].city+'</p>'+
-                        '<a href="#!/'+scope.brewers[i].selector+' ">Go To Listing</a>'
+                        '<a href="#!/'+scope.brewers[i].selector+' ">Go To Listing</a>';
 
                         infowindow = googleMapStuff.infoWindowCreator(infoContent);
 

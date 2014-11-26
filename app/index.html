@@ -83,34 +83,42 @@
 
     <!-- build:js(.) scripts/angular-min.js -->
     <!-- not-bower:js -->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- not-endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/angular-rh.js -->
     <script src="scripts/app.js"></script>
 
-    <script src="scripts/services/resolve-factory.js"></script>
-    <script src="scripts/services/brewer-factory.js"></script>
-    <script src="scripts/services/storage-factory.js"></script>
-    <script src="scripts/services/load-gmap-api.js"></script>
-    <script src="scripts/services/google-map-stuff.js"></script>
-    <script src="scripts/services/weather-key.js"></script>
-    <script src="scripts/services/weather-factory.js"></script>
-    <script src="scripts/services/rounding-numbers.js"></script>
-    <script src="scripts/services/skycon-convert.js"></script>
-    <script src="scripts/services/dining-factory.js"></script>
-    <script src="scripts/services/shopping-factory.js"></script>
-    <script src="scripts/services/yelp-key.js"></script>
-    <script src="scripts/services/brewercache-key.js"></script>
-    <script src="scripts/services/weathercache-key.js"></script>
-    <script src="scripts/services/diningcache-key.js"></script>
-    <script src="scripts/services/shoppingcache-key.js"></script>
+    <script src="scripts/services/utilities/rounding-numbers.js"></script>
+    <script src="scripts/services/utilities/skycon-convert.js"></script>
+    <script src="scripts/services/utilities/storage-factory.js"></script>
+
+    <script src="scripts/services/keys/weather-io-key.js"></script>
+    <script src="scripts/services/keys/yelp-key.js"></script>
+    <script src="scripts/services/keys/brewer-cache-key.js"></script>
+    <script src="scripts/services/keys/weather-cache-key.js"></script>
+    <script src="scripts/services/keys/dining-cache-key.js"></script>
+    <script src="scripts/services/keys/shopping-cache-key.js"></script>
+
+    <script src="scripts/services/ajax/brewer-factory.js"></script>
+    <script src="scripts/services/ajax/weather-factory.js"></script>
+    <script src="scripts/services/ajax/dining-factory.js"></script>
+    <script src="scripts/services/ajax/shopping-factory.js"></script>
+
+    <script src="scripts/services/resolves/brewer-resolve.js"></script>
+    <script src="scripts/services/resolves/weather-resolve.js"></script>
+    <script src="scripts/services/resolves/dining-resolve.js"></script>
+    <script src="scripts/services/resolves/shopping-resolve.js"></script>
+
+    <script src="scripts/services/google/google-map-api-load.js"></script>
+    <script src="scripts/services/google/google-map-stuff.js"></script>
 
     <script src="scripts/filters/data-filter.js"></script>
+
     <script src="scripts/controllers/brewer-list.js"></script>
     <script src="scripts/controllers/brewer-detail.js"></script>
     <script src="scripts/controllers/brewer-detail-map.js"></script>

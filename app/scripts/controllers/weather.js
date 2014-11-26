@@ -10,11 +10,11 @@
 
 angular
     .module('vtbtApp')
-    .controller('WeatherCtrl', function ($scope, $routeParams, storageFactory, appDataFilter, roundingNumbers, BREWERCACHEKEY, WEATHERCACHEKEY) {
+    .controller('WeatherCtrl', function ($scope, $routeParams, storageFactory, appDataFilter, roundingNumbers, brewerCacheKey, weatherCacheKey) {
 
-            var weatherData = storageFactory.getData($routeParams.selector + '-' + WEATHERCACHEKEY);
+            var weatherData = storageFactory.getData($routeParams.selector + '-' + weatherCacheKey);
 
-            $scope.brewer = appDataFilter.brewer(storageFactory.getData(BREWERCACHEKEY), $routeParams.selector);
+            $scope.brewer = appDataFilter.brewer(storageFactory.getData(brewerCacheKey), $routeParams.selector);
             $scope.weather = weatherData;
 
             $scope.temp = roundingNumbers.roundNumber(weatherData.currently.temperature);

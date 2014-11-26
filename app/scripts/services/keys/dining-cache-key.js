@@ -10,4 +10,4 @@
 
 angular
     .module('vtbtApp')
-    .constant('DININGCACHEKEY', 'dining-cache');
+    .constant('diningCacheKey', 'dining-cache');

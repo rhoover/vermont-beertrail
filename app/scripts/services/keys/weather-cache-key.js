@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name vtbtApp.brewerlistKey
+ * @name vtbtApp.weathercacheKey
  * @description
- * # brewerlistKey
+ * # weathercacheKey
  * Constant in the vtbtApp.
  */
 
 angular
     .module('vtbtApp')
-    .constant('BREWERCACHEKEY', 'brewer-list-cache');
+    .constant('weatherCacheKey', 'weather-cache');

@@ -6,6 +6,7 @@
  * @description
  * # analyticsGoogle
  * Factory in the vtbtApp.
+ ********  Here for historical/reference purposes
  */
 
 angular

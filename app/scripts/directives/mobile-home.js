@@ -15,7 +15,7 @@ angular
             scope: {
                 bodyBg: '@mobileHome'
             },
-            link: function (scope, element, attrs) {
+            link: function (scope, element) {
                 scope.$on('$locationChangeSuccess', function () {
                     if ($location.path() === scope.bodyBg) {
                         element.addClass('body-small-intro');

@@ -2,12 +2,11 @@
 
 /**
  * @ngdoc service
- * @name vtbtApp.weathercacheKey
+ * @name vtbtApp.shoppingcacheKey
  * @description
- * # weathercacheKey
+ * # shoppingcacheKey
  * Constant in the vtbtApp.
  */
-
 angular
     .module('vtbtApp')
-    .constant('WEATHERCACHEKEY', 'weather-cache');
+    .constant('shoppingCacheKey', 'shopping-cache');
