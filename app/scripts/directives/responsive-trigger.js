@@ -12,7 +12,7 @@ angular.module('vtbtApp')
         return {
             restrict: 'A',
             scope: {},
-            link: function (scope, element) {
+            link: function (scope, element, attrs) {
                 //Responsive Image Solution
                 //Inspired by: http://tech.particulate.me/javascript/2013/10/10/how-to-conveniently-check-for-responsive-breakpoints-in-javascript/
                 scope = {};
@@ -27,6 +27,7 @@ angular.module('vtbtApp')
                     break;
                     case 'computer' :
                         element.addClass('large');
+                        // attrs.$set('must-work', '');
                     break;
                 }
 

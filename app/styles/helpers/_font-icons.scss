@@ -28,16 +28,11 @@ $icons: (
         @if $styles {
             // Supportive icon styles have been specified
             font: {
-                style: normal;
-                variant: normal;
-                weight: normal;
                 family: $BeerTrail;
             }
             @include adjust-font-size-to(20px);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            text-transform: none;
-            speak: none;
         }
         // Include any extra rules supplied for the pseudo-element
         @content;

@@ -39,15 +39,16 @@ angular
 
                 var sortedBrewers= [];
                 sortedBrewers = input.sort(function (a, b) {
-                    if (a.selector < b.selector)
-                        {
-                            return -1;
-                        }
-                    if (a.selector > b.selector)
-                        {
-                            return 1;
-                        }
-                    return 0;
+                    // if (a.selector < b.selector)
+                    //     {
+                    //         return -1;
+                    //     }
+                    // if (a.selector > b.selector)
+                    //     {
+                    //         return 1;
+                    //     }
+                    // return 0;
+                    return (a.selector < b.selector) ? -1 : 1;
                 });
 
                 return sortedBrewers;
@@ -56,15 +57,16 @@ angular
 
                 var sortedBusinesses= [];
                 sortedBusinesses = input.sort(function (a, b) {
-                    if (a.name < b.name)
-                        {
-                            return -1;
-                        }
-                    if (a.name > b.name)
-                        {
-                            return 1;
-                        }
-                    return 0;
+                    // if (a.name < b.name)
+                    //     {
+                    //         return -1;
+                    //     }
+                    // if (a.name > b.name)
+                    //     {
+                    //         return 1;
+                    //     }
+                    // return 0;
+                    return (a.name < b.name) ? -1 : 1;
                 });
 
                 return sortedBusinesses;

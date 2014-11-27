@@ -111,3 +111,35 @@
         }
     }
 }
+
+%detail-button {
+        @include span(12 of 12 no-gutters);
+        margin-top: rhythm(1, 16px);
+        text-align: center;
+        color: $black;
+        text-decoration: none;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(18 of 18 no-gutters);
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            @include span(24 of 24 no-gutters);
+            &:hover {
+                color: $black;
+                @include type-weight(bold);
+            }
+        }
+        &:before {
+            float: left;
+            padding-left: span(3 of 12);
+            color: $grey-blue;
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                padding-left: span(7 of 18);
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                padding-left: span(9 of 24);
+            }
+        }
+        &:active {
+            background-color: $green;
+        }
+   }

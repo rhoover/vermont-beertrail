@@ -1,5 +1,6 @@
 .brewerdetail {
     &-image {
+        @extend %responsive-trigger;
         display: block;
         margin: 0 auto;
     }
@@ -15,34 +16,25 @@
         margin-top: 0px;
     }
     &-button {
-        @include span(12 of 12 no-gutters);
-        margin-top: rhythm(1, 16px);
-        text-align: center;
-        color: $black;
-        text-decoration: none;
-        @include susy-breakpoint($bp-medium, $columns-medium) {
-            @include span(18 of 18 no-gutters);
+        &-map {
+            @extend %detail-button;
+            @include icon('before', true, 'map');
         }
-        @include susy-breakpoint($bp-large, $columns-large) {
-            @include span(24 of 24 no-gutters);
-            &:hover {
-                color: $black;
-                @include type-weight(bold);
-            }
+        &-phone {
+            @extend %detail-button;
+            @include icon('before', true, 'phone');
         }
-        &:before {
-            float: left;
-            padding-left: span(3 of 12);
-            color: $grey-blue;
-            @include susy-breakpoint($bp-medium, $columns-medium) {
-                padding-left: span(7 of 18);
-            }
-            @include susy-breakpoint($bp-large, $columns-large) {
-                padding-left: span(9 of 24);
-            }
+        &-shopping {
+            @extend %detail-button;
+            @include icon('before', true, 'shopping');
         }
-        &:active {
-            background-color: $green;
+        &-dining {
+            @extend %detail-button;
+            @include icon('before', true, 'dining');
+        }
+        &-weather {
+            @extend %detail-button;
+            @include icon('before', true, 'weather');
         }
     }
     &-linktext {
@@ -55,23 +47,5 @@
         @include susy-breakpoint($bp-large, $columns-large) {
             padding-left: span(12 of 24);
         }
-    }
-}
-
-.icon {
-    &-map {
-        @include icon('before', true, 'map');
-    }
-    &-phone {
-        @include icon('before', true, 'phone');
-    }
-    &-shopping {
-        @include icon('before', true, 'shopping');
-    }
-    &-dining {
-        @include icon('before', true, 'dining');
-    }
-    &-weather {
-        @include icon('before', true, 'weather');
     }
 }
