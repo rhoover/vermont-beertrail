@@ -5,17 +5,18 @@
  * @name vtbtApp.directive:resTrigger
  * @description
  * # resTrigger
+ * Inspired by: http://tech.particulate.me/javascript/2013/10/10/how-to-conveniently-check-for-responsive-breakpoints-in-javascript/
  */
 
-angular.module('vtbtApp')
+angular
+    .module('vtbtApp')
     .directive('resTrigger', function () {
+
         return {
             restrict: 'A',
             scope: {},
+
             link: function (scope, element, attrs) {
-                //Responsive Image Solution
-                //Inspired by: http://tech.particulate.me/javascript/2013/10/10/how-to-conveniently-check-for-responsive-breakpoints-in-javascript/
-                scope = {};
                 var result = getComputedStyle(element[0], ':after').content;
                 result = result.replace(/"/g,''); //Because Firefox keeps quotes from content
                 switch (result) {
@@ -30,7 +31,6 @@ angular.module('vtbtApp')
                         // attrs.$set('must-work', '');
                     break;
                 }
-
             }
         };
     });

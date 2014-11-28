@@ -5,7 +5,7 @@
         margin: 0 auto;
     }
     &-header {
-        margin-top: rhythm(.25, 16px);
+        margin-top: rhythm(.75, 16px);
         text-align: center;
         color: $black;
         @include type-scale(medium);
