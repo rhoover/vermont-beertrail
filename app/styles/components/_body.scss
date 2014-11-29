@@ -1,9 +1,10 @@
 html {
     min-height: 100vh;
+    @include container;
 }
 
 .body {
-    @include container;
+    @extend %responsive-trigger;
     min-height: 100vh;
     font-family: $MerriweatherSans;
     @extend %font-helpers;
