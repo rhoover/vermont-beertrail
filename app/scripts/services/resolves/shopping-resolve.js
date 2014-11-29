@@ -10,7 +10,7 @@
 
 angular
     .module('vtbtApp')
-    .factory('resolveShopping', function ($route, storageFactory, brewerFactory, appDataFilter, shoppingFactory, brewerCacheKey, shoppingCacheKey) {
+    .factory('resolveShopping', function ($route, storageFactory, brewerFactory, findDataFilter, shoppingFactory, brewerCacheKey, shoppingCacheKey) {
 
         return {
             shopping: function () {
@@ -18,7 +18,7 @@ angular
                     var shoppingDataReturn = brewerFactory.getBrewerData()
                         .then(function success(data) {
                             storageFactory.storeData(brewerCacheKey, data);
-                            var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
+                            var singleBrewer = findDataFilter.brewerFind(data, $route.current.params.selector);
                             return shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude);
                         })
                         .then(function success(data) {
@@ -26,7 +26,7 @@ angular
                         });
                     return shoppingDataReturn;
                 } else {
-                    var singleBrewer = appDataFilter.brewer(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
+                    var singleBrewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
                     var shoppingDataOneReturn = shoppingFactory.yelpShoppingInfo(singleBrewer.latitude, singleBrewer.longitude)
                         .then(function success(data) {
                             storageFactory.storeData($route.current.params.selector + '-' + shoppingCacheKey, data);

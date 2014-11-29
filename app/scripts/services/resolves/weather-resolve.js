@@ -10,7 +10,7 @@
 
 angular
     .module('vtbtApp')
-    .factory('resolveWeather', function ($route, weatherFactory, storageFactory, brewerFactory, appDataFilter, brewerCacheKey, weatherCacheKey) {
+    .factory('resolveWeather', function ($route, weatherFactory, storageFactory, brewerFactory, findDataFilter, brewerCacheKey, weatherCacheKey) {
 
         return {
             weather: function () {
@@ -19,7 +19,7 @@ angular
                     var weatherDataReturn = brewerFactory.getBrewerData()
                         .then(function success(data) {
                             storageFactory.storeData(brewerCacheKey, data);
-                            var singleBrewer = appDataFilter.brewer(data, $route.current.params.selector);
+                            var singleBrewer = findDataFilter.brewerFind(data, $route.current.params.selector);
                             //aka $http.get('/my-second-url')
                             return weatherFactory.weatherReturnedInfo(singleBrewer.latitude, singleBrewer.longitude);
                         })
@@ -29,7 +29,7 @@ angular
                     return weatherDataReturn;
 
                 } else {
-                    var singleBrewer = appDataFilter.brewer(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
+                    var singleBrewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $route.current.params.selector);
                     var weatherDataOneReturn = weatherFactory.weatherReturnedInfo(singleBrewer.latitude, singleBrewer.longitude)
                         .then(function success(data) {
                             storageFactory.storeData($route.current.params.selector + '-' + weatherCacheKey, data);

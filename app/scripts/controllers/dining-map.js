@@ -7,11 +7,13 @@
  * # DiningMapCtrl
  * Controller of the vtbtApp
  */
-angular.module('vtbtApp')
-    .controller('DiningMapCtrl', function ($scope, $routeParams, storageFactory, appDataFilter) {
+
+angular
+    .module('vtbtApp')
+    .controller('DiningMapCtrl', function ($scope, $routeParams, storageFactory, findDataFilter) {
 
         var diningListData = storageFactory.getData($routeParams.selector + '-' + 'dining-cache');
-        var findTheBusiness = appDataFilter.business(diningListData.businesses, $routeParams.id);
+        var findTheBusiness = findDataFilter.businessFind(diningListData.businesses, $routeParams.id);
 
         $scope.dining = findTheBusiness;
     });

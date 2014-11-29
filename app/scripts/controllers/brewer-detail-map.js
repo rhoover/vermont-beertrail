@@ -10,9 +10,9 @@
 
 angular
     .module('vtbtApp')
-    .controller('BrewerMapCtrl', function ($scope, $routeParams, $window, storageFactory, appDataFilter) {
+    .controller('BrewerMapCtrl', function ($scope, $routeParams, $window, storageFactory, findDataFilter) {
 
-        $scope.brewer = appDataFilter.brewer(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
+        $scope.brewer = findDataFilter.brewerFind(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
 
         //I wish this weren't here, but for the life of me, could not get this to work from a factory :(.
         $window.navigator.geolocation.watchPosition(function (position) {
