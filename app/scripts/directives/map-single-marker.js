@@ -12,31 +12,25 @@ angular
     .directive('singleMarkerMap', function (loadGoogleMapAPI, googleMapStuff) {
 
         return {
+
             restrict: 'A',
             scope: {
-
                 lat: '@lat',
                 lon: '@lon',
                 lati: '@lati',
                 loni: '@loni'
-
             },
-            link: function (scope, element, attrs) {
 
+            link: function (scope, element, attrs) {
                 //note this is an abstraction on top of standard GoogleMaps initialization stuff, so we don't repeat ourselves
                 var myMapOptions, map, marker, circle, dynamicCircle;
                 var div = element[0];
 
                 scope.initialize = function () {
-
                     myMapOptions = googleMapStuff.mapOptions(10, attrs.lat, attrs.lon);
-
                     map = googleMapStuff.mapCreator(div, myMapOptions);
-
                     marker = googleMapStuff.mapMarker(map, attrs.lat, attrs.lon);
-
                     circle = googleMapStuff.gpsCircle(map, attrs.lati, attrs.loni);
-
                     dynamicCircle = googleMapStuff.dynamicCircle(map, circle);
 
                 };

@@ -10,8 +10,11 @@
 angular
     .module('vtbtApp')
     .directive('homeDataPrefetch', function ($timeout, resolveBrewers) {
+
         return {
+
             restrict: 'A',
+
             link: function () {
                 $timeout(function(){
                     resolveBrewers.brewers();

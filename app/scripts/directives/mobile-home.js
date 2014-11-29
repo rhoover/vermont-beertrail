@@ -10,17 +10,18 @@
 angular
     .module('vtbtApp')
     .directive('mobileHome', function ($location) {
+
         return {
+
             restrict: 'A',
-            scope: {
-                bodyBg: '@mobileHome'
-            },
+            scope: {},
+
             link: function (scope, element) {
                 scope.$on('$locationChangeSuccess', function () {
-                    if ($location.path() === scope.bodyBg) {
-                        element.addClass('body-small-intro');
+                    if ($location.path() === '/') {
+                        element.addClass('body-small-home');
                     } else {
-                        element.removeClass('body-small-intro');
+                        element.removeClass('body-small-home');
                     }
                 });
             }

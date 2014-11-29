@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="vtbtApp"  res-trigger>
+<html ng-app="vtbtApp">
     <head>
         <!-- Generic -->
         <meta charset="utf-8"/>
@@ -67,12 +67,12 @@
         <!-- endbuild -->
     </head>
 
-    <body  class ="body" mobile-home="/">
+    <body  class ="body" data-mobile-home>
 
     <header class="header">
-        <span back-button class="header-back-button"></span>
+        <span data-back-button class="header-back-button"></span>
         <h1 class="header-heading">VT BeerTrail</h1>
-        <span home-button="/" class="header-home-button"></span>
+        <span data-home-button class="header-home-button"></span>
     </header>
 
     <main ng-view class="view"></main>

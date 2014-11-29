@@ -13,6 +13,7 @@ angular
     .directive('resTrigger', function () {
 
         return {
+
             restrict: 'A',
             scope: {},
 
@@ -28,7 +29,6 @@ angular
                     break;
                     case 'computer' :
                         element.addClass('large');
-                        // attrs.$set('must-work', '');
                     break;
                 }
             }
