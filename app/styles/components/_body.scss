@@ -11,6 +11,9 @@ html {
     &-small-home {
         background: url('/images/phone-home-bg.jpg') no-repeat fixed left top;
         background-size: cover;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            background: $white;
+        }
     }
 }
 
