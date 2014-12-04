@@ -12,6 +12,7 @@
 angular
     .module('vtbtApp')
     .filter('findData', function () {
+
         return {
 
             brewerFind: function (input, arg) {//input is the json file, arg is the selector property
