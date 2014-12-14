@@ -6,6 +6,8 @@
 
 <input class="search-input" placeholder="Search: Everything" ng-model="search.$">
 
+<div class="brewer-list-scroller" data-scroll-to-top></div>
+
 <a ng-href="#!/{{brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in diningList | filter:search:strict  track by $index">
     <img ng-src="{{dining.photo_url_small}}" class="yelp-list-item-image" />
     <p class="yelp-list-item-details">{{dining.name}}</p>

@@ -194,4 +194,38 @@
         }
    }
 
-%expando-hover {}
+%scroller-button {
+    position: fixed;
+    right: 0px;
+    bottom: rhythm(3, 16px);
+    width: span(2 of 12 no-gutters);
+    height: rhythm(3, 16px);
+    background: rgba($grey-blue, .10);
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+    border-top: .1em solid rgba($grey-blue, .3);
+    border-left: .1em solid rgba($grey-blue, .3);
+    border-bottom: .1em solid rgba($grey-blue, .3);
+    cursor: pointer;
+    &:hover {
+        border-top: .1em solid rgba($grey-blue, .75);
+        border-left: .1em solid rgba($grey-blue, .75);
+        border-bottom: .1em solid rgba($grey-blue, .75);
+        &:before {
+            border-top: .3em solid rgba($grey-blue, .75);
+            border-left: .3em solid rgba($grey-blue, .75);
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 28px;
+        left: 16px;
+        @include rotate(45deg);
+        background: transparent;
+        border-top: .3em solid rgba($grey-blue, .3);
+        border-left: .3em solid rgba($grey-blue, .3);
+    }
+}

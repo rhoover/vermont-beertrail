@@ -2,7 +2,7 @@
     &-attribution {
         @extend %attribution;
         @include susy-breakpoint($bp-medium, $columns-medium) {
-            $bleed: span(6)+gutter(3.5);
+            $bleed: span(6)+gutter(2.3);
             @include bleed-x($bleed);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
@@ -17,7 +17,6 @@
         @include type-scale(medium);
         text-align: center;
         color: $black;
-        // border-top: .05em solid $grey-blue;
         border-bottom: .05em solid $grey-blue;
         @include susy-breakpoint($bp-large, $columns-large) {
             text-align: left;

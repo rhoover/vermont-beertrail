@@ -18,7 +18,7 @@ angular
             link: function (scope, element) {
                 function goBack() {
                     history.back();
-                    scope.$apply();
+                    scope.$digest();
                 }
                 element.bind('click', goBack);
             }
