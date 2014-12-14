@@ -36,14 +36,34 @@
     padding: rhythm(1, 16px) 0px;
     border-bottom: .1em solid $grey-blue;
     text-decoration: none;
+    position: relative;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 wide of 18 no-gutters);
         padding-left: span(3 of 18);
     }
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(8 of 24 no-gutters);
+        //expando-hover
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba($grey-blue, .1);
+            visibility: hidden;
+            @include scaleX(0);
+            @include transition-property(all);
+            @include transition-duration(0.3s);
+            @include transition-timing-function(ease-in-out);
+        }
         &:hover {
-            background-color: rgba($grey-blue, .25);
+            @include type-weight(bold);
+            &:after {
+                visibility: visible;
+                @include scaleX(1);
+            }
         }
     }
     &:focus {
@@ -124,17 +144,22 @@
             @include span(18 of 18 no-gutters);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
-            @include span(14 of 24 no-gutters);
-            margin-left: span(5 of 24);
-            margin-right: span(5 of 24);
+            @include span(10 of 24 no-gutters);
+            margin-left: span(1 of 24);
+            padding: rhythm(2, 16px) 0;
+            border-radius: .25em;
+            border: solid .1em rgba($grey-blue, .75);
+            &:nth-of-type(odd) {
+                margin-left: span(2.25 of 24);
+            }
             &:after {
                 content: "";
                 position: absolute;
                 width: 100%;
-                height: 1px;
+                height: 100%;
                 bottom: 0px;
                 left: 0px;
-                background-color: $grey-blue;
+                background-color: rgba($grey-blue, .1);
                 visibility: hidden;
                 @include scaleX(0);
                 @include transition-property(all);
@@ -143,13 +168,14 @@
             }
             &:hover {
                 @include type-weight(bold);
+                border: solid .1em $grey-blue;
                 &:after {
                     visibility: visible;
-                @include scaleX(.75);
+                    @include scaleX(1);
                 }
             }
         }
-        &:before {
+        &:before { //icon stuff
             float: left;
             padding-left: span(3 of 12);
             color: $grey-blue;
@@ -157,7 +183,7 @@
                 padding-left: span(7 of 18);
             }
             @include susy-breakpoint($bp-large, $columns-large) {
-                padding-left: span(9 of 24);
+                padding-left: span(7 of 24);
             }
         }
         &:active {
@@ -167,3 +193,5 @@
             background-color: rgba($grey-blue, .25);
         }
    }
+
+%expando-hover {}

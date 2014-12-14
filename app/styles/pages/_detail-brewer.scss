@@ -45,7 +45,8 @@
             padding-left: span(9 of 18);
         }
         @include susy-breakpoint($bp-large, $columns-large) {
-            padding-left: span(12 of 24);
+            padding-left: span(6 of 24);
+            text-align: center;
         }
     }
 }
