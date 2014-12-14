@@ -10,15 +10,15 @@
 
 angular
     .module('vtbtApp')
-    .factory('resolveDining', function ($route, storageFactory, brewerFactory, findDataFilter, diningFactory, brewerCacheKey, diningCacheKey) {
+    .factory('resolveDining', function ($route, storageFactory, brewerFactory, findDataFilter, sortDataFilter, diningFactory, brewerCacheKey, diningCacheKey) {
 
         return {
             dining: function () {
                 if (storageFactory.getData(brewerCacheKey) === null) {
                     var diningDataReturn = brewerFactory.getBrewerData()
                         .then(function success(data) {
-                            storageFactory.storeData(brewerCacheKey, data);
-                            var singleBrewer = findDataFilter.brewerFind(data, $route.current.params.selector);
+                            var singleBrewer = findDataFilter.brewerFind(sortDataFilter.brewerSort(data), $route.current.params.selector);
+                            storageFactory.storeData(brewerCacheKey, sortDataFilter.brewerSort(data));
                             return diningFactory.yelpDiningInfo(singleBrewer.latitude, singleBrewer.longitude);
                         })
                         .then(function success(data) {

@@ -10,8 +10,9 @@
 
 angular
     .module('vtbtApp')
-    .controller('ListBrewerCtrl', function ($scope, storageFactory, sortDataFilter, brewerCacheKey) {
+    .controller('ListBrewerCtrl', function ($scope, storageFactory, brewerCacheKey) {
 
-        $scope.brewerList = sortDataFilter.brewerSort(storageFactory.getData(brewerCacheKey));
+        // $scope.brewerList = sortDataFilter.brewerSort(storageFactory.getData(brewerCacheKey));
+        $scope.brewerList = storageFactory.getData(brewerCacheKey);
 
     });
