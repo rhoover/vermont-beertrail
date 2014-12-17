@@ -4,7 +4,7 @@
 <div class="brewer-list-scroller" data-scroll-to-top></div>
 
 <!-- <a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in brewerList | filter:search:strict track by $index" class="brewer-list-item"> -->
-<a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in brewerList | filter:search:strict track by brewer.latitude" class="brewer-list-item">
+<a ng-href="#!/{{brewer.selector}}" ng-repeat="brewer in lbC.brewerList | filter:search:strict track by brewer.latitude" class="brewer-list-item">
     <div class=" brewer-list-item-image brewer40-{{brewer.selector}}"></div>
     <p class="brewer-list-item-detail">{{brewer.name}}</p>
     <p class="brewer-list-item-detail brewer-list-item-detail-small">{{brewer.address}}</p>

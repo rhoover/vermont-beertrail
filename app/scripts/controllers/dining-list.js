@@ -10,9 +10,9 @@
 
 angular
     .module('vtbtApp')
-    .controller('ListDiningCtrl', function ($scope, $routeParams, storageFactory, sortDataFilter, findDataFilter) {
+    .controller('ListDiningCtrl', function ($routeParams, storageFactory, sortDataFilter, findDataFilter, diningCacheKey, brewerCacheKey) {
 
-        $scope.diningList = sortDataFilter.businessSort(storageFactory.getData($routeParams.selector + '-' + 'dining-cache').businesses);
-        $scope.brewer = findDataFilter.brewerFind(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
+        this.diningList = sortDataFilter.businessSort(storageFactory.getData($routeParams.selector + '-' + diningCacheKey).businesses);
+        this.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
 
     });

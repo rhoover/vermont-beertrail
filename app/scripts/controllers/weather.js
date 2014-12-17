@@ -14,11 +14,11 @@ angular
 
             var weatherData = storageFactory.getData($routeParams.selector + '-' + weatherCacheKey);
 
-            $scope.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
-            $scope.weather = weatherData;
+            this.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
+            this.weather = weatherData;
 
-            $scope.temp = roundingNumbers.roundNumber(weatherData.currently.temperature);
-            $scope.maxTemp = roundingNumbers.roundNumber(weatherData.daily.data[2].temperatureMax);
+            this.temp = roundingNumbers.roundNumber(weatherData.currently.temperature);
+            this.maxTemp = roundingNumbers.roundNumber(weatherData.daily.data[2].temperatureMax);
 
 
     });

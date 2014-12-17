@@ -10,8 +10,8 @@
 
 angular
     .module('vtbtApp')
-    .controller('ListShoppingCtrl', function ($scope, $routeParams, storageFactory,  sortDataFilter, findDataFilter) {
+    .controller('ListShoppingCtrl', function ($routeParams, storageFactory,  sortDataFilter, findDataFilter, shoppingCacheKey, brewerCacheKey) {
 
-        $scope.shoppingList = sortDataFilter.businessSort(storageFactory.getData($routeParams.selector + '-' + 'shopping-cache').businesses);
-        $scope.brewer = findDataFilter.brewerFind(storageFactory.getData('brewer-list-cache'), $routeParams.selector);
+        this.shoppingList = sortDataFilter.businessSort(storageFactory.getData($routeParams.selector + '-' + shoppingCacheKey).businesses);
+        this.brewer = findDataFilter.brewerFind(storageFactory.getData(brewerCacheKey), $routeParams.selector);
     });

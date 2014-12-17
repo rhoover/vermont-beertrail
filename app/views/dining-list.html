@@ -8,7 +8,7 @@
 
 <div class="brewer-list-scroller" data-scroll-to-top></div>
 
-<a ng-href="#!/{{brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in diningList | filter:search:strict  track by $index">
+<a ng-href="#!/{{ldC.brewer.selector}}/dininglist/{{dining.id}}" class="yelp-list-item" ng-repeat="dining in ldC.diningList | filter:search:strict  track by $index">
     <img ng-src="{{dining.photo_url_small}}" class="yelp-list-item-image" />
     <p class="yelp-list-item-details">{{dining.name}}</p>
     <p class="yelp-list-item-details-small">{{dining.address1}}</p>

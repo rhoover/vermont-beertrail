@@ -16,11 +16,11 @@ angular
             restrict: 'A',
 
             link: function (scope, element) {
-                function goBack() {
-                    history.back();
-                    scope.$digest();
-                }
-                element.bind('click', goBack);
+                element.on('click', function () {
+                    scope.$apply(function () {
+                        history.back();
+                    });
+                });
             }
         };
     });
