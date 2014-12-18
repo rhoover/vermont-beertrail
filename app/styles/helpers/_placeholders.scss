@@ -196,21 +196,25 @@
 
 %scroller-button {
     position: fixed;
-    right: 0px;
+    z-index: 15;
+    right: span(.5 of 12);
     bottom: rhythm(3, 16px);
     width: span(2 of 12 no-gutters);
-    height: rhythm(3, 16px);
+    height: rhythm(2.3, 16px);
     background: rgba($grey-blue, .10);
-    border-top-left-radius: .5em;
-    border-bottom-left-radius: .5em;
-    border-top: .1em solid rgba($grey-blue, .3);
-    border-left: .1em solid rgba($grey-blue, .3);
-    border-bottom: .1em solid rgba($grey-blue, .3);
+    border-radius: 100%;
+    border: .1em solid rgba($grey-blue, .3);
     cursor: pointer;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        width: span(1.4 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        right: span(2 of 24);
+        width: span(1 of 24);
+    }
     &:hover {
-        border-top: .1em solid rgba($grey-blue, .75);
-        border-left: .1em solid rgba($grey-blue, .75);
-        border-bottom: .1em solid rgba($grey-blue, .75);
+        border: .1em solid rgba($grey-blue, .75);
+        background: rgba($grey-blue, .30);
         &:before {
             border-top: .3em solid rgba($grey-blue, .75);
             border-left: .3em solid rgba($grey-blue, .75);
@@ -221,11 +225,18 @@
         position: absolute;
         width: 25px;
         height: 25px;
-        top: 28px;
-        left: 16px;
+        top: 20px;
+        left: 14px;
         @include rotate(45deg);
         background: transparent;
         border-top: .3em solid rgba($grey-blue, .3);
         border-left: .3em solid rgba($grey-blue, .3);
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            left: 14px;
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            top: 19px;
+            left: 15px;
+        }
     }
 }
