@@ -1,9 +1,9 @@
-VT Beer Trail
+VT Beer Trail - Version 3
 =============
 
-AngularJS [Web-App/Fansite](http://www.vtbeertrail.com).
+AngularJS [Web-App/Travel Guide](http://www.vtbeertrail.com).
 
-Target Audience: Beer tourists and their ilk travelling Vermont with cell phones in-hand.
+Target Audience: Beer tourists and their ilk travelling Vermont with cell phones in-hand. Those researching Vermont's Breweries.
 
 Tools
 ---------------
@@ -11,19 +11,19 @@ Tools
 * [AngularJS](http://angularjs.org/)
 * [Compass](http://compass-style.org/)
 * [Susy](http://susy.oddbird.net/)
-* [Yeoman](http://yeoman.io/)
 * [Grunt](http://gruntjs.com/)
 * [Bower](http://bower.io/)
 * [Git](http://git-scm.com/)
 
-TODO
+WHY?
 ---------------------
 
+* Totally new (to me) pattern for AngularJS code, following: [Best Practice](https://github.com/johnpapa/angularjs-styleguide)
+
+TODO
+---------------------
+* Everything at this point, but down the line:
 * Dynamic title element
 * Full Server-Side SEO
-* Google Maps HTML5 Geo-Location Blue Dot
-* [Done] Re-factor GET requests to use $q to return promises
 * Track client-side load times
-* Would app-cache be worth it considering the far-future cacheing configurations in .htaccess
-* [Done] Move filters out of mark-up and into filter module: improves performance
 * Head up to Morrisville to buy a growler of Petit Ardennes from Lost Nation

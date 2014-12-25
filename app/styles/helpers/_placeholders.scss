@@ -199,8 +199,10 @@
     z-index: 15;
     right: span(.5 of 12);
     bottom: rhythm(3, 16px);
-    width: span(2 of 12 no-gutters);
-    height: rhythm(2.3, 16px);
+    // width: span(2 of 12 no-gutters);
+    // height: rhythm(2.3, 16px);
+    width: 60px;
+    height: 60px;
     background: rgba($grey-blue, .10);
     border-radius: 100%;
     border: .1em solid rgba($grey-blue, .3);
@@ -225,8 +227,8 @@
         position: absolute;
         width: 25px;
         height: 25px;
-        top: 20px;
-        left: 14px;
+        top: 22px;
+        left: 17px;
         @include rotate(45deg);
         background: transparent;
         border-top: .3em solid rgba($grey-blue, .3);
